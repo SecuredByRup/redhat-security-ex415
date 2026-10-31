@@ -1,0 +1,8 @@
+=== COMPLIANCE SCAN SUMMARY ===
+Scan Date: Sat Oct 31 11:42:44 UTC 2026
+
+DISA STIG Compliance Results:
+     96 Result: xccdf
+
+PCI-DSS Compliance Results:
+     52 Result: xccdf
