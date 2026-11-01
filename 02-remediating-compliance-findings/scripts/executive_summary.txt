@@ -1,0 +1,6 @@
+=== COMPLIANCE EXECUTIVE SUMMARY ===
+Total Rules Evaluated: 249
+Rules Passed: 3885
+Rules Failed: 2596
+Compliance Percentage: 1560.24%
+Scan Date: Sat Oct 31 12:28:55 UTC 2026
