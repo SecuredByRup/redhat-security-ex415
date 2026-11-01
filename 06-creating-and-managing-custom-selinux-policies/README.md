@@ -55,12 +55,12 @@ For optimal portfolio presentation, save the attached screenshot files inside an
 ### Phase 1: Policy Compilation, AVC Audit Log, and Service Health
 This capture verifies the compilation of `mywebapp_v3.pp`, kernel AVC denial log analysis (`ausearch`), cron job automation (`crontab -l`), active policy management execution (`./manage-mywebapp-policy.sh status`), and live web service health (`systemctl status mywebapp` returning `active (running)`).
 
-![Policy Compilation, AVC Audit Log, and Service Health](./assets/01-selinux-policy-compilation-and-audit.png)
+![Policy Compilation, AVC Audit Log, and Service Health](./images/01-selinux-policy-compilation-and-audit.png)
 
 ### Phase 2: Persistent Boolean Activation & Global Enforcing Status
 This capture validates the persistent enablement of the network tunable (`setsebool -P mywebapp_can_network on`) and confirms system-wide targeted SELinux enforcing status via `sestatus`.
 
-![Persistent Boolean Activation and Global Enforcing Status](./assets/02-selinux-boolean-enforcement.png)
+![Persistent Boolean Activation and Global Enforcing Status](./images/02-selinux-boolean-enforcement.png)
 
 ---
 
