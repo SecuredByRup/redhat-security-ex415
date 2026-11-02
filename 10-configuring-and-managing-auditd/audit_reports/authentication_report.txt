@@ -1,0 +1,50 @@
+
+Authentication Report
+============================================
+# date time acct host term exe success event
+============================================
+1. 12/31/25 06:33:13 ec2-user 18.206.107.29 ssh /usr/sbin/sshd no 66
+2. 12/31/25 06:35:27 ec2-user 154.192.1.78 ? /usr/sbin/sshd yes 107
+3. 12/31/25 06:35:49 ec2-user 154.192.1.78 ? /usr/sbin/sshd yes 150
+4. 12/31/25 06:57:47 ec2-user 154.192.1.78 ? /usr/libexec/openssh/sshd-session yes 81
+5. 12/31/25 06:58:35 gdm ip-172-31-15-213.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 124
+6. 12/31/25 07:10:24 gdm ip-172-31-15-213.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 355
+7. 12/31/25 07:26:17 centos ip-172-31-15-213.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker no 569
+8. 12/31/25 07:26:36 ec2-user ip-172-31-15-213.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 575
+9. 12/31/25 07:37:32 ec2-user 154.192.1.78 ? /usr/libexec/openssh/sshd-session yes 72
+10. 12/31/25 07:43:21 gdm ip-172-31-15-213.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 202
+11. 12/31/25 07:47:04 gdm ip-172-31-15-213.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 342
+12. 12/31/25 07:47:55 gdm ip-172-31-15-213.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 445
+13. 12/31/25 07:50:12 centos ip-172-31-15-213.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 540
+14. 12/31/25 07:50:59 centos ip-172-31-15-213.ec2.internal /dev/pts/1 /usr/bin/sudo yes 577
+15. 12/31/25 07:51:16 centos ip-172-31-15-213.ec2.internal /dev/pts/1 /usr/bin/sudo yes 580
+16. 12/31/25 07:54:55 centos ip-172-31-15-213.ec2.internal /dev/pts/1 /usr/bin/sudo yes 604
+17. 12/31/25 08:01:56 centos ip-172-31-15-213.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 622
+18. 12/31/25 08:10:00 centos ip-172-31-15-213.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 643
+19. 01/19/26 07:43:36 gdm ip-172-31-10-228.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 74
+20. 01/19/26 07:44:49 centos ip-172-31-10-228.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 123
+21. 01/19/26 07:45:11 ec2-user 154.192.1.10 ? /usr/libexec/openssh/sshd-session yes 155
+22. 01/19/26 07:59:02 root ip-172-31-10-228.ec2.internal /dev/pts/0 /usr/bin/su yes 241
+23. 01/19/26 08:00:38 ec2-user ip-172-31-10-228.ec2.internal /dev/pts/0 /usr/bin/su yes 251
+24. 01/19/26 08:14:43 gdm ip-172-31-10-33.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 65
+25. 01/19/26 08:15:58 centos 154.192.1.10 ? /usr/libexec/openssh/sshd-session yes 110
+26. 01/19/26 08:17:01 ec2-user 154.192.1.10 ? /usr/libexec/openssh/sshd-session yes 150
+27. 01/19/26 08:22:13 gdm ip-172-31-10-33.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 69
+28. 01/19/26 08:23:01 ec2-user 154.192.1.10 ? /usr/libexec/openssh/sshd-session yes 107
+29. 07/03/26 05:54:33 gdm ip-172-31-15-244.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 71
+30. 07/03/26 05:55:33 ec2-user 154.192.51.122 ? /usr/libexec/openssh/sshd-session yes 108
+31. 07/03/26 06:17:24 gdm ip-172-31-15-219.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 63
+32. 07/03/26 06:17:38 ec2-user 154.192.51.122 ? /usr/libexec/openssh/sshd-session yes 79
+33. 07/03/26 06:22:41 root ip-172-31-15-219.ec2.internal /dev/pts/0 /usr/bin/su yes 468
+34. 07/03/26 06:24:06 root ip-172-31-15-219.ec2.internal /dev/pts/0 /usr/bin/su yes 480
+35. 07/03/26 06:25:41 root ip-172-31-15-219.ec2.internal /dev/pts/0 /usr/bin/su yes 504
+36. 07/03/26 06:25:50 ec2-user ip-172-31-15-219.ec2.internal /dev/pts/0 /usr/bin/su yes 512
+37. 07/03/26 06:26:42 root ip-172-31-15-219.ec2.internal /dev/pts/0 /usr/bin/su yes 520
+38. 07/03/26 06:27:08 ec2-user ip-172-31-15-219.ec2.internal /dev/pts/0 /usr/bin/su yes 534
+39. 09/12/26 11:56:50 gdm ip-172-31-15-216.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 66
+40. 09/12/26 11:57:10 ec2-user 154.192.107.192 ? /usr/libexec/openssh/sshd-session yes 153
+41. 09/12/26 11:59:02 root ip-172-31-15-216.ec2.internal /dev/pts/0 /usr/bin/su yes 504
+42. 11/02/26 07:46:20 gdm ip-172-31-10-56.ec2.internal /dev/tty1 /usr/libexec/gdm-session-worker yes 72
+43. 11/02/26 07:46:55 centos 27.34.65.30 ? /usr/libexec/openssh/sshd-session yes 165
+44. 11/02/26 07:47:57 centos ip-172-31-10-56.ec2.internal /dev/pts/0 /usr/bin/sudo yes 235
+45. 11/02/26 07:49:18 root ip-172-31-10-56.ec2.internal /dev/pts/0 /usr/bin/su yes 258

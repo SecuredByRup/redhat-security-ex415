@@ -1,0 +1,46 @@
+policy_module(mywebapp, 1.0.0)
+
+########################################
+#
+# Declarations
+#
+
+type mywebapp_t;
+type mywebapp_exec_t;
+init_daemon_domain(mywebapp_t, mywebapp_exec_t)
+
+type mywebapp_content_t;
+files_type(mywebapp_content_t)
+
+type mywebapp_var_run_t;
+files_pid_file(mywebapp_var_run_t)
+
+########################################
+#
+# mywebapp local policy
+#
+
+allow mywebapp_t self:tcp_socket create_stream_socket_perms;
+allow mywebapp_t self:process { fork signal_perms };
+
+# Network permissions
+corenet_tcp_bind_generic_node(mywebapp_t)
+corenet_tcp_bind_http_port(mywebapp_t)
+corenet_tcp_sendrecv_generic_if(mywebapp_t)
+corenet_tcp_sendrecv_generic_node(mywebapp_t)
+
+# File permissions
+allow mywebapp_t mywebapp_content_t:dir list_dir_perms;
+allow mywebapp_t mywebapp_content_t:file read_file_perms;
+
+# System permissions
+kernel_read_system_state(mywebapp_t)
+dev_read_urand(mywebapp_t)
+
+# Logging
+logging_send_syslog_msg(mywebapp_t)
+
+# Basic system permissions
+files_read_etc_files(mywebapp_t)
+libs_use_ld_so(mywebapp_t)
+libs_use_shared_libs(mywebapp_t)
