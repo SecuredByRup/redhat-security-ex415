@@ -1,0 +1,44 @@
+Cron Job Monitoring Report
+=========================
+Generated: 2026-11-02 15:21:46
+
+Cron Service Status:
+● crond.service - Command Scheduler
+     Loaded: loaded (/usr/lib/systemd/system/crond.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2026-11-02 14:57:43 UTC; 24min ago
+   Main PID: 1155 (crond)
+      Tasks: 2 (limit: 98000)
+     Memory: 1.5M (peak: 4.2M)
+        CPU: 76ms
+     CGroup: /system.slice/crond.service
+             ├─1155 /usr/sbin/crond -n
+             └─4013 /usr/sbin/anacron -s
+
+Nov 02 15:01:01 ip-172-31-10-204.ec2.internal CROND[4002]: (root) CMD (run-parts /etc/cron.hourly)
+Nov 02 15:01:01 ip-172-31-10-204.ec2.internal anacron[4013]: Anacron started on 2026-11-02
+Nov 02 15:01:01 ip-172-31-10-204.ec2.internal anacron[4013]: Will run job `cron.daily' in 10 min.
+Nov 02 15:01:01 ip-172-31-10-204.ec2.internal anacron[4013]: Will run job `cron.weekly' in 30 min.
+Nov 02 15:01:01 ip-172-31-10-204.ec2.internal anacron[4013]: Will run job `cron.monthly' in 50 min.
+Nov 02 15:01:01 ip-172-31-10-204.ec2.internal anacron[4013]: Jobs will be executed sequentially
+Nov 02 15:01:01 ip-172-31-10-204.ec2.internal run-parts[4015]: (/etc/cron.hourly) finished 0anacron
+Nov 02 15:01:01 ip-172-31-10-204.ec2.internal CROND[4001]: (root) CMDEND (run-parts /etc/cron.hourly)
+Nov 02 15:11:01 ip-172-31-10-204.ec2.internal anacron[4013]: Job `cron.daily' started
+Nov 02 15:11:01 ip-172-31-10-204.ec2.internal anacron[4013]: Job `cron.daily' terminated
+
+Scheduled Security Jobs:
+0 2 * * * /opt/security-scripts/master_security.sh daily
+0 3 * * 0 /opt/security-scripts/master_security.sh weekly
+0 */6 * * * /opt/security-scripts/port_security.sh
+0 8,12,16 * * 1-5 /opt/security-scripts/security_audit.sh
+
+Recent Security Script Executions:
+[2026-11-02 15:20:59] Running daily security tasks...
+[2026-11-02 15:20:59] Executing security audit...
+[2026-11-02 15:20:14] Running daily security tasks...
+[2026-11-02 15:20:14] Executing security audit...
+[2026-11-02 15:20:59] Executing port security check...
+[2026-11-02 15:20:59] Mail not configured - notification skipped
+[2026-11-02 15:20:59] === Daily Security Tasks Completed ===
+[2026-11-02 15:20:14] Executing port security check...
+[2026-11-02 15:20:14] Mail not configured - notification skipped
+[2026-11-02 15:20:14] === Weekly Security Tasks Completed ===
