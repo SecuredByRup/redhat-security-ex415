@@ -1,0 +1,23 @@
+
+module mywebapp_additions 1.0;
+
+require {
+	type http_cache_port_t;
+	type bin_t;
+	type mywebapp_content_t;
+	type cert_t;
+	type mywebapp_t;
+	class file { execute execute_no_trans getattr map open read write };
+	class dir { getattr open read search };
+	class tcp_socket name_bind;
+}
+
+#============= mywebapp_t ==============
+allow mywebapp_t bin_t:file { execute execute_no_trans };
+
+#!!!! This avc can be allowed using the boolean 'domain_can_mmap_files'
+allow mywebapp_t bin_t:file map;
+allow mywebapp_t cert_t:dir { getattr open read search };
+allow mywebapp_t cert_t:file { getattr open read };
+allow mywebapp_t http_cache_port_t:tcp_socket name_bind;
+allow mywebapp_t mywebapp_content_t:file write;
