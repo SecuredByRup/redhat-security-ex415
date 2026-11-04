@@ -1,0 +1,12 @@
+
+Login Report
+============================================
+# date time auid host term exe success event
+============================================
+1. 12/31/25 06:33:13 ec2-user 18.206.107.29 ssh /usr/sbin/sshd no 71
+2. 12/31/25 06:34:32 ec2-user 154.192.1.78 ssh /usr/sbin/sshd no 79
+3. 12/31/25 06:34:40 (unknown) 154.192.1.78 ssh /usr/sbin/sshd no 87
+4. 12/31/25 06:34:51 (unknown) 154.192.1.78 ssh /usr/sbin/sshd no 95
+5. 12/31/25 06:34:54 ec2-user 154.192.1.78 ssh /usr/sbin/sshd no 103
+6. 12/31/25 06:35:43 (unknown) 154.192.1.78 ssh /usr/sbin/sshd no 144
+7. 12/31/25 07:26:20 centos ? ? /usr/libexec/gdm-session-worker no 570

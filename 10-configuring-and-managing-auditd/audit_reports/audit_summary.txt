@@ -1,0 +1,29 @@
+
+Summary Report
+======================
+Range of time in logs: 12/31/25 06:26:06.132 - 11/02/26 08:02:31.100
+Selected time for report: 12/31/25 06:26:06 - 11/02/26 08:02:31.100
+Number of changes in configuration: 151
+Number of changes to accounts, groups, or roles: 47
+Number of logins: 15
+Number of failed logins: 7
+Number of authentications: 43
+Number of failed authentications: 2
+Number of users: 5
+Number of terminals: 11
+Number of host names: 14
+Number of executables: 39
+Number of commands: 38
+Number of files: 72
+Number of AVC's: 0
+Number of MAC events: 52
+Number of failed syscalls: 0
+Number of anomaly events: 1
+Number of responses to anomaly events: 0
+Number of crypto events: 161
+Number of integrity events: 0
+Number of virt events: 0
+Number of keys: 12
+Number of process IDs: 630
+Number of events: 7229
+
