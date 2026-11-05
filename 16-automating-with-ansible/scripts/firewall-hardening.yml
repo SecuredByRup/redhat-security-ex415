@@ -1,0 +1,34 @@
+---
+- name: Firewall Security Configuration
+  hosts: all
+  become: yes
+  vars:
+    allowed_ports:
+      - 22/tcp    # SSH
+      - 80/tcp    # HTTP
+      - 443/tcp   # HTTPS
+    
+  tasks:
+    - name: Install firewalld
+      package:
+        name: firewalld
+        state: present
+        
+    - name: Start and enable firewalld
+      systemd:
+        name: firewalld
+        state: started
+        enabled: yes
+        
+    - name: Allow essential ports in public zone
+      firewalld:
+        zone: public
+        port: "{{ item }}"
+        permanent: yes
+        immediate: yes
+        state: enabled
+      loop: "{{ allowed_ports }}"
+      ignore_errors: yes
+        
+    - name: Reload firewalld configuration
+      command: firewall-cmd --reload
