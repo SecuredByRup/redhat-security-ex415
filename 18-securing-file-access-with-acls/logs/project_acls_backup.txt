@@ -1,0 +1,216 @@
+# file: ../project
+# owner: root
+# group: root
+user::rwx
+user:alice:rwx
+group::r-x
+group:developers:r-x
+mask::rwx
+other::r-x
+default:user::rwx
+default:user:alice:rwx
+default:group::r-x
+default:group:developers:r-x
+default:mask::rwx
+default:other::r-x
+
+# file: ../project/src
+# owner: root
+# group: root
+user::rwx
+user:alice:rwx
+group::r-x
+group:developers:r-x
+mask::rwx
+other::r-x
+default:user::rwx
+default:user:alice:rwx
+default:group::r-x
+default:group:developers:r-x
+default:mask::rwx
+default:other::---
+
+# file: ../project/src/main.py
+# owner: root
+# group: root
+user::rwx
+user:alice:rwx
+group::r-x
+group:developers:r-x
+mask::rwx
+other::r-x
+
+# file: ../project/src/newfile.py
+# owner: root
+# group: root
+user::rw-
+user:alice:rwx
+group::r-x
+group:developers:r-x
+mask::rwx
+other::---
+
+# file: ../project/docs
+# owner: root
+# group: root
+user::rwx
+user:alice:rwx
+group::r-x
+group:developers:r-x
+mask::rwx
+other::r-x
+default:user::rwx
+default:user:alice:rwx
+default:group::r-x
+default:group:developers:r-x
+default:mask::rwx
+default:other::r-x
+
+# file: ../project/docs/manual.pdf
+# owner: root
+# group: root
+user::rwx
+user:alice:rwx
+user:charlie:r--
+user:diana:r--
+group::r-x
+group:developers:r-x
+group:managers:rw-
+mask::rwx
+other::r-x
+
+# file: ../project/config
+# owner: root
+# group: root
+user::rwx
+user:alice:rwx
+group::r-x
+group:developers:r-x
+mask::rwx
+other::r-x
+default:user::rwx
+default:user:alice:rwx
+default:group::r-x
+default:group:developers:r-x
+default:mask::rwx
+default:other::r-x
+
+# file: ../project/config/settings.conf
+# owner: root
+# group: root
+user::rwx
+user:alice:rwx
+group::r-x
+group:developers:r-x
+mask::rwx
+other::r-x
+
+# file: ../project/README.txt
+# owner: root
+# group: root
+user::rwx
+user:alice:rwx
+group::r-x
+group:developers:r-x
+mask::rwx
+other::r-x
+
+# file: ../project/test_acl.txt
+# owner: root
+# group: root
+user::rw-
+user:alice:rwx
+group::r--
+group:developers:r-x
+mask::rwx
+other::r--
+
+# file: ../project/sensitive
+# owner: root
+# group: root
+user::rwx
+user:alice:rwx
+user:charlie:r-x
+group::r-x
+group:developers:r-x
+mask::rwx
+other::---
+default:user::rwx
+default:user:alice:rwx
+default:group::r-x
+default:group:developers:r-x
+default:mask::rwx
+default:other::r-x
+
+# file: ../project/shared
+# owner: root
+# group: root
+user::rwx
+user:alice:rwx
+group::r-x
+group:developers:r-x
+group:managers:r-x
+group:auditors:r-x
+mask::rwx
+other::r-x
+default:user::rwx
+default:user:alice:rwx
+default:group::r-x
+default:group:developers:r-x
+default:mask::rwx
+default:other::r-x
+
+# file: ../project/shared/team_document.txt
+# owner: root
+# group: root
+user::rw-
+user:alice:rwx
+group::r-x
+group:developers:rw-
+group:managers:r--
+group:auditors:r--
+mask::rwx
+other::r--
+
+# file: ../project/inheritance_test
+# owner: root
+# group: root
+user::rwx
+user:alice:rwx
+group::r-x
+group:developers:r-x
+mask::rwx
+other::r-x
+default:user::rwx
+default:user:alice:rwx
+default:group::r-x
+default:group:developers:rw-
+default:mask::rwx
+default:other::---
+
+# file: ../project/inheritance_test/alice_file.txt
+# owner: alice
+# group: alice
+user::rw-
+user:alice:rwx	#effective:rw-
+group::r-x	#effective:r--
+group:developers:rw-
+mask::rw-
+other::---
+
+# file: ../project/inheritance_test/subdir
+# owner: alice
+# group: alice
+user::rwx
+user:alice:rwx
+group::r-x
+group:developers:rw-
+mask::rwx
+other::---
+default:user::rwx
+default:user:alice:rwx
+default:group::r-x
+default:group:developers:rw-
+default:mask::rwx
+default:other::---
+
