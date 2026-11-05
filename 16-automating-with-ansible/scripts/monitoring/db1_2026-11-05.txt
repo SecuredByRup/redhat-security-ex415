@@ -1,0 +1,23 @@
+=== Security Monitoring Report ===
+Generated: 2026-11-05T08:02:09Z
+Host: web1
+
+Recent Failed SSH Logins:
+
+
+Fail2ban Status:
+Sorry but the jail 'sshd' does not exist
+
+Listening Ports:
+tcp   LISTEN 0      128          0.0.0.0:22        0.0.0.0:*   
+tcp   LISTEN 0      10           0.0.0.0:8443      0.0.0.0:*   
+tcp   LISTEN 0      128             [::]:22           [::]:*   
+tcp   LISTEN 0      10              [::]:8443         [::]:*   
+
+System Load:
+ 08:02:11 up 23 min,  1 user,  load average: 0.55, 0.35, 0.27
+
+Disk Usage:
+/dev/nvme0n1p4   29G  8.3G   21G  29% /
+/dev/nvme0n1p3  966M  800M  100M  89% /boot
+/dev/nvme0n1p2  500M   11M  489M   3% /boot/efi

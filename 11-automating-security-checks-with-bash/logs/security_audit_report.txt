@@ -1,0 +1,137 @@
+=== FILE PERMISSIONS AUDIT ===
+/etc/passwd: Permissions=644, Owner=root:root
+/etc/shadow: Permissions=0, Owner=root:root
+WARNING: /etc/shadow has insecure permissions!
+/etc/group: Permissions=644, Owner=root:root
+/etc/gshadow: Permissions=0, Owner=root:root
+WARNING: /etc/gshadow has insecure permissions!
+=== SUID/SGID FILES ===
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: ens5
+  sources: 
+  services: ssh
+  ports: 8443/tcp
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+=== SECURITY LOG ANALYSIS ===
+Recent failed login attempts:
+Recent sudo usage:
+Nov  2 15:14:38 ip-172-31-10-204 sudo[10518]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+=== SYSTEM INTEGRITY CHECK ===
+World-writable files (sample):
+/proc/sys/kernel/ns_last_pid
+/proc/1/task/1/attr/current
+/proc/1/task/1/attr/exec
+/proc/1/task/1/attr/fscreate
+/proc/1/task/1/attr/keycreate
+/proc/1/task/1/attr/sockcreate
+/proc/1/attr/current
+/proc/1/attr/exec
+/proc/1/attr/fscreate
+/proc/1/attr/keycreate
+Disk usage:
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        7.5G     0  7.5G   0% /dev
+tmpfs           7.7G     0  7.7G   0% /dev/shm
+tmpfs           3.1G   18M  3.1G   1% /run
+efivarfs        128K  4.1K  119K   4% /sys/firmware/efi/efivars
+/dev/nvme0n1p4   29G  8.2G   21G  29% /
+/dev/nvme0n1p3  966M  800M  100M  89% /boot
+/dev/nvme0n1p2  500M   11M  489M   3% /boot/efi
+tmpfs           1.6G   56K  1.6G   1% /run/user/42
+tmpfs           1.6G   36K  1.6G   1% /run/user/1001
+=== AUDIT SUMMARY ===
+Audit completed on: 2026-11-02 15:20:59
+Report location: /var/log/security_audit_report.txt
+Log location: /var/log/security_audit.log
+Potential security issues found: 2
+-rwsr-xr-x. 1 root root 56824 Sep 22  2025 /usr/bin/at
+-rwsr-xr-x. 1 root root 73704 Dec  9  2025 /usr/bin/chage
+-rws--x--x. 1 root root 32208 Jan 16  2025 /usr/bin/chfn
+-rws--x--x. 1 root root 23960 Jan 16  2025 /usr/bin/chsh
+-rwsr-xr-x. 1 root root 57120 Apr 23  2025 /usr/bin/crontab
+-rwsr-xr-x. 1 root root 78016 Dec  9  2025 /usr/bin/gpasswd
+-rwx--s--x. 1 root slocate 41032 Aug 10  2021 /usr/bin/locate
+-rwsr-xr-x. 1 root root 48648 Jan 16  2025 /usr/bin/mount
+-rwsr-xr-x. 1 root root 41744 Dec  9  2025 /usr/bin/newgrp
+-rwsr-xr-x. 1 root root 32648 Aug 10  2021 /usr/bin/passwd
+-rwsr-xr-x. 1 root root 31928 Aug  6  2025 /usr/bin/pkexec
+-rwsr-xr-x. 1 root root 57112 Jan 16  2025 /usr/bin/su
+---s--x--x. 1 root root 185304 Jun 30  2025 /usr/bin/sudo
+-rwsr-xr-x. 1 root root 36280 Jan 16  2025 /usr/bin/umount
+-rwxr-sr-x. 1 root tty 23968 Jan 16  2025 /usr/bin/write
+-rwsr-xr-x. 1 root root 36384 Jun 17  2024 /usr/bin/fusermount3
+-rwsr-xr-x. 1 root root 36368 Dec  2  2024 /usr/bin/fusermount
+-rwsr-xr-x. 1 root root 15528 Nov  6  2025 /usr/bin/vmware-user-suid-wrapper
+-rwsr-xr-x. 1 root root 19728 Aug  6  2025 /usr/lib/polkit-1/polkit-agent-helper-1
+-r-xr-sr-x. 1 root ssh_keys 350200 Dec  9  2025 /usr/libexec/openssh/ssh-keysign
+=== USER ACCOUNT AUDIT ===
+Accounts with UID 0 (root privileges):
+root
+Accounts without passwords:
+Recently active users (last 30 days):
+Username         Port     From                                       Latest
+root             pts/3                                              Mon Nov  2 15:14:38 +0000 2026
+gdm              tty1                                               Mon Nov  2 14:57:55 +0000 2026
+centos           pts/3    27.34.65.27                               Mon Nov  2 15:12:30 +0000 2026
+=== NETWORK SECURITY AUDIT ===
+Listening services:
+tcp        0      0 0.0.0.0:8443            0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+tcp6       0      0 :::8443                 :::*                    LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+Firewall status:
+running
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: ens5
+  sources: 
+  services: ssh
+  ports: 8443/tcp
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+=== SECURITY LOG ANALYSIS ===
+Recent failed login attempts:
+Recent sudo usage:
+Nov  2 15:14:38 ip-172-31-10-204 sudo[10518]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+=== SYSTEM INTEGRITY CHECK ===
+World-writable files (sample):
+/proc/sys/kernel/ns_last_pid
+/proc/1/task/1/attr/current
+/proc/1/task/1/attr/exec
+/proc/1/task/1/attr/fscreate
+/proc/1/task/1/attr/keycreate
+/proc/1/task/1/attr/sockcreate
+/proc/1/attr/current
+/proc/1/attr/exec
+/proc/1/attr/fscreate
+/proc/1/attr/keycreate
+Disk usage:
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        7.5G     0  7.5G   0% /dev
+tmpfs           7.7G     0  7.7G   0% /dev/shm
+tmpfs           3.1G   18M  3.1G   1% /run
+efivarfs        128K  4.1K  119K   4% /sys/firmware/efi/efivars
+/dev/nvme0n1p4   29G  8.2G   21G  29% /
+/dev/nvme0n1p3  966M  800M  100M  89% /boot
+/dev/nvme0n1p2  500M   11M  489M   3% /boot/efi
+tmpfs           1.6G   56K  1.6G   1% /run/user/42
+tmpfs           1.6G   36K  1.6G   1% /run/user/1001
+=== AUDIT SUMMARY ===
+Audit completed on: 2026-11-02 15:21:03
+Report location: /var/log/security_audit_report.txt
+Log location: /var/log/security_audit.log
+Potential security issues found: 2

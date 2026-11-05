@@ -1,0 +1,698 @@
+Remediating rule 1/252: 'xccdf_org.ssgproject.content_rule_rpm_verify_hashes'
+Last metadata expiration check: 0:14:12 ago on Sat Oct 31 11:56:11 2026.
+Installed package nice-dcv-web-viewer-2025.0.20103-1.el9.x86_64 (from @commandline) not available.
+Error: No packages marked for reinstall.
+Remediating rule 2/252: 'xccdf_org.ssgproject.content_rule_rpm_verify_ownership'
+chown: cannot access '/var/run/amazon/amazon-cloudwatch-agent': No such file or directory
+chgrp: cannot access '/var/run/amazon/amazon-cloudwatch-agent': No such file or directory
+Remediating rule 3/252: 'xccdf_org.ssgproject.content_rule_package_aide_installed'
+Last metadata expiration check: 0:14:27 ago on Sat Oct 31 11:56:11 2026.
+Dependencies resolved.
+================================================================================
+ Package       Architecture    Version                 Repository          Size
+================================================================================
+Installing:
+ aide          x86_64          0.19.2-7.el9            appstream          168 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 168 k
+Installed size: 417 k
+Downloading Packages:
+aide-0.19.2-7.el9.x86_64.rpm                    2.3 MB/s | 168 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           430 kB/s | 168 kB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : aide-0.19.2-7.el9.x86_64                               1/1 
+  Running scriptlet: aide-0.19.2-7.el9.x86_64                               1/1 
+  Verifying        : aide-0.19.2-7.el9.x86_64                               1/1 
+
+Installed:
+  aide-0.19.2-7.el9.x86_64                                                      
+
+Complete!
+Remediating rule 4/252: 'xccdf_org.ssgproject.content_rule_aide_build_database'
+Start timestamp: 2026-10-31 12:10:42 +0000 (AIDE 0.19.2)
+AIDE successfully initialized database.
+New AIDE database written to /var/lib/aide/aide.db.new.gz
+
+Number of entries:	203739
+
+---------------------------------------------------
+The attributes of the (uncompressed) database(s):
+---------------------------------------------------
+
+/var/lib/aide/aide.db.new.gz
+ SHA256    : poK8pZSqALzqe8k2fSFQAUyAgcmwCUN9
+             Ln1pPoeitTE=
+ SHA512    : JFx361efoG0Ms3VvM3d0GX00vmkqx6tP
+             e6xMDOto79S8+KFPunc5aAp/Gsqx3tRF
+             8LRJEHkiHkzZ+OCEGjmZsw==
+ STRIBOG256: +lYsO8YFMVDC9LFWrwP6DXqbMHgVSRsc
+             H+VB+Ak5K08=
+ STRIBOG512: PiXGnEaIlrp47Syu+vcvWF2ZyTG32UUn
+             rClO9z7QJks0BcKjzejFfM7bgrCLQRc3
+             sMGcGMQssIsiSXHnThFnzw==
+ SHA512/256: QGprRQEUiFyQ1oIegbNHAmDn9uy1p2z1
+             soQbYJ097/s=
+ SHA3-256  : rSvKDh0fllrt1S6dH+Xy+4EsL66I31zF
+             X80WoXsEvWE=
+ SHA3-512  : CTD53H3Iu47z2ABX8gqKccEubNWRjHRw
+             3efLaKasggc2cwlx/WW0adjQq1RfIKzt
+             ouKBz/ioD2uHT+4AKEgqjw==
+
+
+End timestamp: 2026-10-31 12:11:33 +0000 (run time: 0m 51s)
+Remediating rule 5/252: 'xccdf_org.ssgproject.content_rule_aide_periodic_cron_checking'
+Remediating rule 6/252: 'xccdf_org.ssgproject.content_rule_configure_crypto_policy'
+Remediating rule 7/252: 'xccdf_org.ssgproject.content_rule_dconf_db_up_to_date'
+Remediating rule 8/252: 'xccdf_org.ssgproject.content_rule_enable_dconf_user_profile'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_enable_dconf_user_profile' IS MISSING!
+Remediating rule 9/252: 'xccdf_org.ssgproject.content_rule_gnome_gdm_disable_automatic_login'
+Remediating rule 10/252: 'xccdf_org.ssgproject.content_rule_dconf_gnome_disable_automount'
+Remediating rule 11/252: 'xccdf_org.ssgproject.content_rule_dconf_gnome_disable_automount_open'
+Remediating rule 12/252: 'xccdf_org.ssgproject.content_rule_dconf_gnome_screensaver_idle_activation_enabled'
+Remediating rule 13/252: 'xccdf_org.ssgproject.content_rule_dconf_gnome_screensaver_idle_delay'
+Remediating rule 14/252: 'xccdf_org.ssgproject.content_rule_dconf_gnome_screensaver_lock_delay'
+Remediating rule 15/252: 'xccdf_org.ssgproject.content_rule_dconf_gnome_screensaver_lock_enabled'
+Remediating rule 16/252: 'xccdf_org.ssgproject.content_rule_dconf_gnome_screensaver_mode_blank'
+Remediating rule 17/252: 'xccdf_org.ssgproject.content_rule_dconf_gnome_session_idle_user_locks'
+Remediating rule 18/252: 'xccdf_org.ssgproject.content_rule_package_sudo_installed'
+Remediating rule 19/252: 'xccdf_org.ssgproject.content_rule_sudo_add_use_pty'
+Remediating rule 20/252: 'xccdf_org.ssgproject.content_rule_sudo_custom_logfile'
+Remediating rule 21/252: 'xccdf_org.ssgproject.content_rule_sudo_require_authentication'
+Remediating rule 22/252: 'xccdf_org.ssgproject.content_rule_sudo_require_reauthentication'
+Remediating rule 23/252: 'xccdf_org.ssgproject.content_rule_package_cryptsetup-luks_installed'
+Remediating rule 24/252: 'xccdf_org.ssgproject.content_rule_ensure_gpgcheck_globally_activated'
+Remediating rule 25/252: 'xccdf_org.ssgproject.content_rule_ensure_gpgcheck_never_disabled'
+Remediating rule 26/252: 'xccdf_org.ssgproject.content_rule_ensure_redhat_gpgkey_installed'
+gpg: directory '/root/.gnupg' created
+gpg: keybox '/root/.gnupg/pubring.kbx' created
+gpg: /root/.gnupg/trustdb.gpg: trustdb created
+Remediating rule 27/252: 'xccdf_org.ssgproject.content_rule_security_patches_up_to_date'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_security_patches_up_to_date' IS MISSING!
+Remediating rule 28/252: 'xccdf_org.ssgproject.content_rule_enable_authselect'
+No existing configuration detected.
+[error] File [/etc/pam.d/system-auth] exists but it needs to be overwritten!
+[error] File [/etc/pam.d/password-auth] exists but it needs to be overwritten!
+[error] File [/etc/pam.d/fingerprint-auth] exists but it needs to be overwritten!
+[error] File [/etc/pam.d/smartcard-auth] exists but it needs to be overwritten!
+[error] File [/etc/pam.d/postlogin] exists but it needs to be overwritten!
+[error] File [/etc/nsswitch.conf] exists but it needs to be overwritten!
+[error] File that needs to be overwritten was found
+[error] Refusing to activate profile unless this file is removed or overwrite is requested.
+
+Some unexpected changes to the configuration were detected.
+Use --force parameter if you want to overwrite these changes.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-35.yX0szE
+Profile "sssd" was selected.
+The following nsswitch maps are overwritten by the profile:
+- passwd
+- group
+- netgroup
+- automount
+- services
+
+Make sure that SSSD service is configured and enabled. See SSSD documentation for more information.
+
+Remediating rule 29/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_etc_issue_net'
+Remediating rule 30/252: 'xccdf_org.ssgproject.content_rule_file_owner_etc_issue_net'
+Remediating rule 31/252: 'xccdf_org.ssgproject.content_rule_file_permissions_etc_issue_net'
+Remediating rule 32/252: 'xccdf_org.ssgproject.content_rule_display_login_attempts'
+Current configuration is valid.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-36.eUtjtH
+Changes were successfully applied.
+Remediating rule 33/252: 'xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_remember_password_auth'
+Current configuration is valid.
+Make sure that SSSD service is configured and enabled. See SSSD documentation for more information.
+
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-36.DK6ZFq
+Changes were successfully applied.
+Current configuration is valid.
+New profile was created at /etc/authselect/custom/hardening
+Backup stored at /var/lib/authselect/backups/before-hardening-custom-profile
+Changes were successfully applied.
+Profile "custom/hardening" was selected.
+The following nsswitch maps are overwritten by the profile:
+- passwd
+- group
+- netgroup
+- automount
+- services
+
+Make sure that SSSD service is configured and enabled. See SSSD documentation for more information.
+
+Make sure that SSSD service is configured and enabled. See SSSD documentation for more information.
+
+Backup stored at /var/lib/authselect/backups/after-hardening-custom-profile
+Changes were successfully applied.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-36.skbWGN
+Changes were successfully applied.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-36.YrcoMF
+Changes were successfully applied.
+Remediating rule 34/252: 'xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_remember_system_auth'
+Current configuration is valid.
+Make sure that SSSD service is configured and enabled. See SSSD documentation for more information.
+
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-36.2tviY8
+Changes were successfully applied.
+Current configuration is valid.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-37.HhTWWA
+Changes were successfully applied.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-37.zuojeo
+Changes were successfully applied.
+Remediating rule 35/252: 'xccdf_org.ssgproject.content_rule_accounts_password_pam_unix_remember'
+Current configuration is valid.
+Make sure that SSSD service is configured and enabled. See SSSD documentation for more information.
+
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-37.J9wS2V
+Changes were successfully applied.
+Current configuration is valid.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-37.w1CAZv
+Changes were successfully applied.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-37.ETf2l8
+Changes were successfully applied.
+Remediating rule 36/252: 'xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_deny'
+Current configuration is valid.
+Make sure that SSSD service is configured and enabled. See SSSD documentation for more information.
+
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-37.PyQwvn
+Changes were successfully applied.
+Current configuration is valid.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-37.YMZxZq
+Changes were successfully applied.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-37.i7qgOV
+Changes were successfully applied.
+Current configuration is valid.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-37.u9zwrm
+Changes were successfully applied.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-37.rkz1P8
+Changes were successfully applied.
+Remediating rule 37/252: 'xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_unlock_time'
+Current configuration is valid.
+Make sure that SSSD service is configured and enabled. See SSSD documentation for more information.
+
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-38.pGPSDq
+Changes were successfully applied.
+Current configuration is valid.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-38.CxYK37
+Changes were successfully applied.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-38.Is3Psx
+Changes were successfully applied.
+Current configuration is valid.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-38.LOe00l
+Changes were successfully applied.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-38.twJ55h
+Changes were successfully applied.
+Remediating rule 38/252: 'xccdf_org.ssgproject.content_rule_accounts_password_pam_dcredit'
+Remediating rule 39/252: 'xccdf_org.ssgproject.content_rule_accounts_password_pam_lcredit'
+Remediating rule 40/252: 'xccdf_org.ssgproject.content_rule_accounts_password_pam_minlen'
+Remediating rule 41/252: 'xccdf_org.ssgproject.content_rule_set_password_hashing_algorithm_libuserconf'
+Remediating rule 42/252: 'xccdf_org.ssgproject.content_rule_set_password_hashing_algorithm_logindefs'
+Remediating rule 43/252: 'xccdf_org.ssgproject.content_rule_set_password_hashing_algorithm_systemauth'
+Current configuration is valid.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-39.ZT5Sp5
+Changes were successfully applied.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-39.tpmRfc
+Changes were successfully applied.
+Current configuration is valid.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-39.gUvrD2
+Changes were successfully applied.
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-39.E0FbZh
+Changes were successfully applied.
+Remediating rule 44/252: 'xccdf_org.ssgproject.content_rule_account_unique_id'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_account_unique_id' IS MISSING!
+Remediating rule 45/252: 'xccdf_org.ssgproject.content_rule_group_unique_id'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_group_unique_id' IS MISSING!
+Remediating rule 46/252: 'xccdf_org.ssgproject.content_rule_account_disable_post_pw_expiration'
+Remediating rule 47/252: 'xccdf_org.ssgproject.content_rule_account_unique_name'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_account_unique_name' IS MISSING!
+Remediating rule 48/252: 'xccdf_org.ssgproject.content_rule_accounts_maximum_age_login_defs'
+Remediating rule 49/252: 'xccdf_org.ssgproject.content_rule_accounts_password_set_max_life_existing'
+Remediating rule 50/252: 'xccdf_org.ssgproject.content_rule_accounts_password_set_warn_age_existing'
+Remediating rule 51/252: 'xccdf_org.ssgproject.content_rule_accounts_password_warn_age_login_defs'
+Remediating rule 52/252: 'xccdf_org.ssgproject.content_rule_accounts_set_post_pw_existing'
+Remediating rule 53/252: 'xccdf_org.ssgproject.content_rule_accounts_password_all_shadowed'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_accounts_password_all_shadowed' IS MISSING!
+Remediating rule 54/252: 'xccdf_org.ssgproject.content_rule_accounts_password_last_change_is_in_past'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_accounts_password_last_change_is_in_past' IS MISSING!
+Remediating rule 55/252: 'xccdf_org.ssgproject.content_rule_gid_passwd_group_same'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_gid_passwd_group_same' IS MISSING!
+Remediating rule 56/252: 'xccdf_org.ssgproject.content_rule_no_empty_passwords'
+Current configuration is valid.
+Make sure that SSSD service is configured and enabled. See SSSD documentation for more information.
+
+Backup stored at /var/lib/authselect/backups/2026-10-31-12-11-39.XPmDwI
+Changes were successfully applied.
+Remediating rule 57/252: 'xccdf_org.ssgproject.content_rule_no_empty_passwords_etc_shadow'
+Remediating rule 58/252: 'xccdf_org.ssgproject.content_rule_accounts_no_uid_except_zero'
+Remediating rule 59/252: 'xccdf_org.ssgproject.content_rule_accounts_root_gid_zero'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_accounts_root_gid_zero' IS MISSING!
+Remediating rule 60/252: 'xccdf_org.ssgproject.content_rule_ensure_pam_wheel_group_empty'
+Remediating rule 61/252: 'xccdf_org.ssgproject.content_rule_ensure_root_password_configured'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_ensure_root_password_configured' IS MISSING!
+Remediating rule 62/252: 'xccdf_org.ssgproject.content_rule_no_direct_root_logins'
+Remediating rule 63/252: 'xccdf_org.ssgproject.content_rule_no_password_auth_for_systemaccounts'
+Remediating rule 64/252: 'xccdf_org.ssgproject.content_rule_no_shelllogin_for_systemaccounts'
+awk: cmd. line:2: warning: escape sequence `\/' treated as plain `/'
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+usermod: no changes
+Remediating rule 65/252: 'xccdf_org.ssgproject.content_rule_securetty_root_login_console_only'
+Remediating rule 66/252: 'xccdf_org.ssgproject.content_rule_use_pam_wheel_group_for_su'
+Remediating rule 67/252: 'xccdf_org.ssgproject.content_rule_accounts_tmout'
+Remediating rule 68/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_grub2_cfg'
+Remediating rule 69/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_user_cfg'
+stat: cannot statx '/boot/grub2/user.cfg': No such file or directory
+chgrp: cannot access '/boot/grub2/user.cfg': No such file or directory
+Remediating rule 70/252: 'xccdf_org.ssgproject.content_rule_file_owner_grub2_cfg'
+Remediating rule 71/252: 'xccdf_org.ssgproject.content_rule_file_owner_user_cfg'
+stat: cannot statx '/boot/grub2/user.cfg': No such file or directory
+chown: cannot access '/boot/grub2/user.cfg': No such file or directory
+Remediating rule 72/252: 'xccdf_org.ssgproject.content_rule_file_permissions_grub2_cfg'
+Remediating rule 73/252: 'xccdf_org.ssgproject.content_rule_file_permissions_user_cfg'
+chmod: cannot access '/boot/grub2/user.cfg': No such file or directory
+Remediating rule 74/252: 'xccdf_org.ssgproject.content_rule_rsyslog_files_groupownership'
+Remediating rule 75/252: 'xccdf_org.ssgproject.content_rule_rsyslog_files_ownership'
+Remediating rule 76/252: 'xccdf_org.ssgproject.content_rule_rsyslog_files_permissions'
+Remediating rule 77/252: 'xccdf_org.ssgproject.content_rule_package_logrotate_installed'
+Remediating rule 78/252: 'xccdf_org.ssgproject.content_rule_timer_logrotate_enabled'
+Remediation is not applicable, nothing was done
+Remediating rule 79/252: 'xccdf_org.ssgproject.content_rule_network_nmcli_permissions'
+Remediating rule 80/252: 'xccdf_org.ssgproject.content_rule_network_sniffer_disabled'
+Remediating rule 81/252: 'xccdf_org.ssgproject.content_rule_package_firewalld_installed'
+Remediating rule 82/252: 'xccdf_org.ssgproject.content_rule_service_firewalld_enabled'
+Remediating rule 83/252: 'xccdf_org.ssgproject.content_rule_configure_firewalld_ports'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_configure_firewalld_ports' IS MISSING!
+Remediating rule 84/252: 'xccdf_org.ssgproject.content_rule_firewalld_loopback_traffic_restricted'
+active
+success
+success
+success
+Remediating rule 85/252: 'xccdf_org.ssgproject.content_rule_firewalld_loopback_traffic_trusted'
+active
+success
+success
+Remediating rule 86/252: 'xccdf_org.ssgproject.content_rule_set_firewalld_default_zone'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_set_firewalld_default_zone' IS MISSING!
+Remediating rule 87/252: 'xccdf_org.ssgproject.content_rule_set_ip6tables_default_rule'
+Remediation is not applicable, nothing was done
+Remediating rule 88/252: 'xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_default_accept_source_route'
+grep: /run/sysctl.d/*.conf: No such file or directory
+grep: /usr/local/lib/sysctl.d/*.conf: No such file or directory
+grep: /etc/sysctl.d/net_ipv6_conf_default_accept_source_route.conf: No such file or directory
+Remediating rule 89/252: 'xccdf_org.ssgproject.content_rule_sysctl_net_ipv4_conf_all_rp_filter'
+grep: /run/sysctl.d/*.conf: No such file or directory
+grep: /usr/local/lib/sysctl.d/*.conf: No such file or directory
+grep: /etc/sysctl.d/net_ipv4_conf_all_rp_filter.conf: No such file or directory
+Remediating rule 90/252: 'xccdf_org.ssgproject.content_rule_sysctl_net_ipv4_conf_all_secure_redirects'
+grep: /run/sysctl.d/*.conf: No such file or directory
+grep: /usr/local/lib/sysctl.d/*.conf: No such file or directory
+grep: /etc/sysctl.d/net_ipv4_conf_all_secure_redirects.conf: No such file or directory
+Remediating rule 91/252: 'xccdf_org.ssgproject.content_rule_sysctl_net_ipv4_conf_default_accept_redirects'
+grep: /run/sysctl.d/*.conf: No such file or directory
+grep: /usr/local/lib/sysctl.d/*.conf: No such file or directory
+grep: /etc/sysctl.d/net_ipv4_conf_default_accept_redirects.conf: No such file or directory
+Remediating rule 92/252: 'xccdf_org.ssgproject.content_rule_sysctl_net_ipv4_icmp_echo_ignore_broadcasts'
+grep: /run/sysctl.d/*.conf: No such file or directory
+grep: /usr/local/lib/sysctl.d/*.conf: No such file or directory
+grep: /etc/sysctl.d/net_ipv4_icmp_echo_ignore_broadcasts.conf: No such file or directory
+Remediating rule 93/252: 'xccdf_org.ssgproject.content_rule_sysctl_net_ipv4_icmp_ignore_bogus_error_responses'
+grep: /run/sysctl.d/*.conf: No such file or directory
+grep: /usr/local/lib/sysctl.d/*.conf: No such file or directory
+grep: /etc/sysctl.d/net_ipv4_icmp_ignore_bogus_error_responses.conf: No such file or directory
+Remediating rule 94/252: 'xccdf_org.ssgproject.content_rule_sysctl_net_ipv4_tcp_syncookies'
+grep: /run/sysctl.d/*.conf: No such file or directory
+grep: /usr/local/lib/sysctl.d/*.conf: No such file or directory
+grep: /etc/sysctl.d/net_ipv4_tcp_syncookies.conf: No such file or directory
+Remediating rule 95/252: 'xccdf_org.ssgproject.content_rule_sysctl_net_ipv4_conf_all_send_redirects'
+grep: /run/sysctl.d/*.conf: No such file or directory
+grep: /usr/local/lib/sysctl.d/*.conf: No such file or directory
+grep: /etc/sysctl.d/net_ipv4_conf_all_send_redirects.conf: No such file or directory
+Remediating rule 96/252: 'xccdf_org.ssgproject.content_rule_sysctl_net_ipv4_conf_default_send_redirects'
+grep: /run/sysctl.d/*.conf: No such file or directory
+grep: /usr/local/lib/sysctl.d/*.conf: No such file or directory
+grep: /etc/sysctl.d/net_ipv4_conf_default_send_redirects.conf: No such file or directory
+Remediating rule 97/252: 'xccdf_org.ssgproject.content_rule_sysctl_net_ipv4_ip_forward'
+grep: /run/sysctl.d/*.conf: No such file or directory
+grep: /usr/local/lib/sysctl.d/*.conf: No such file or directory
+grep: /etc/sysctl.d/net_ipv4_ip_forward.conf: No such file or directory
+Remediating rule 98/252: 'xccdf_org.ssgproject.content_rule_package_nftables_installed'
+Remediating rule 99/252: 'xccdf_org.ssgproject.content_rule_service_nftables_disabled'
+Created symlink /etc/systemd/system/nftables.service → /dev/null.
+Failed to reset failed state of unit nftables.service: Unit nftables.service not loaded.
+Remediating rule 100/252: 'xccdf_org.ssgproject.content_rule_kernel_module_dccp_disabled'
+grep: /etc/modprobe.d/dccp.conf: No such file or directory
+Remediating rule 101/252: 'xccdf_org.ssgproject.content_rule_kernel_module_sctp_disabled'
+grep: /etc/modprobe.d/sctp.conf: No such file or directory
+Remediating rule 102/252: 'xccdf_org.ssgproject.content_rule_wireless_disable_interfaces'
+Remediating rule 103/252: 'xccdf_org.ssgproject.content_rule_dir_perms_world_writable_sticky_bits'
+Remediating rule 104/252: 'xccdf_org.ssgproject.content_rule_file_permissions_unauthorized_world_writable'
+Remediating rule 105/252: 'xccdf_org.ssgproject.content_rule_file_permissions_ungroupowned'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_file_permissions_ungroupowned' IS MISSING!
+Remediating rule 106/252: 'xccdf_org.ssgproject.content_rule_no_files_unowned_by_user'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_no_files_unowned_by_user' IS MISSING!
+Remediating rule 107/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_backup_etc_group'
+Remediating rule 108/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_backup_etc_passwd'
+Remediating rule 109/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_backup_etc_shadow'
+Remediating rule 110/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_etc_group'
+Remediating rule 111/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_etc_passwd'
+Remediating rule 112/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_etc_shadow'
+Remediating rule 113/252: 'xccdf_org.ssgproject.content_rule_file_owner_backup_etc_group'
+Remediating rule 114/252: 'xccdf_org.ssgproject.content_rule_file_owner_backup_etc_passwd'
+Remediating rule 115/252: 'xccdf_org.ssgproject.content_rule_file_owner_backup_etc_shadow'
+Remediating rule 116/252: 'xccdf_org.ssgproject.content_rule_file_owner_etc_group'
+Remediating rule 117/252: 'xccdf_org.ssgproject.content_rule_file_owner_etc_passwd'
+Remediating rule 118/252: 'xccdf_org.ssgproject.content_rule_file_owner_etc_shadow'
+Remediating rule 119/252: 'xccdf_org.ssgproject.content_rule_file_permissions_backup_etc_group'
+Remediating rule 120/252: 'xccdf_org.ssgproject.content_rule_file_permissions_backup_etc_passwd'
+Remediating rule 121/252: 'xccdf_org.ssgproject.content_rule_file_permissions_backup_etc_shadow'
+Remediating rule 122/252: 'xccdf_org.ssgproject.content_rule_file_permissions_etc_group'
+Remediating rule 123/252: 'xccdf_org.ssgproject.content_rule_file_permissions_etc_passwd'
+Remediating rule 124/252: 'xccdf_org.ssgproject.content_rule_file_permissions_etc_shadow'
+Remediating rule 125/252: 'xccdf_org.ssgproject.content_rule_kernel_module_usb-storage_disabled'
+grep: /etc/modprobe.d/usb-storage.conf: No such file or directory
+Remediating rule 126/252: 'xccdf_org.ssgproject.content_rule_sysctl_kernel_core_pattern'
+grep: /run/sysctl.d/*.conf: No such file or directory
+grep: /usr/local/lib/sysctl.d/*.conf: No such file or directory
+grep: /etc/sysctl.d/kernel_core_pattern.conf: No such file or directory
+Remediating rule 127/252: 'xccdf_org.ssgproject.content_rule_coredump_disable_backtraces'
+Remediating rule 128/252: 'xccdf_org.ssgproject.content_rule_coredump_disable_storage'
+Remediating rule 129/252: 'xccdf_org.ssgproject.content_rule_disable_users_coredumps'
+Remediating rule 130/252: 'xccdf_org.ssgproject.content_rule_sysctl_fs_suid_dumpable'
+grep: /run/sysctl.d/*.conf: No such file or directory
+grep: /usr/local/lib/sysctl.d/*.conf: No such file or directory
+grep: /etc/sysctl.d/fs_suid_dumpable.conf: No such file or directory
+Remediating rule 131/252: 'xccdf_org.ssgproject.content_rule_sysctl_kernel_randomize_va_space'
+grep: /run/sysctl.d/*.conf: No such file or directory
+grep: /usr/local/lib/sysctl.d/*.conf: No such file or directory
+grep: /etc/sysctl.d/kernel_randomize_va_space.conf: No such file or directory
+Remediating rule 132/252: 'xccdf_org.ssgproject.content_rule_bios_enable_execution_restrictions'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_bios_enable_execution_restrictions' IS MISSING!
+Remediating rule 133/252: 'xccdf_org.ssgproject.content_rule_package_libselinux_installed'
+Remediating rule 134/252: 'xccdf_org.ssgproject.content_rule_grub2_enable_selinux'
+Remediating rule 135/252: 'xccdf_org.ssgproject.content_rule_selinux_confinement_of_daemons'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_selinux_confinement_of_daemons' IS MISSING!
+Remediating rule 136/252: 'xccdf_org.ssgproject.content_rule_selinux_policytype'
+Remediating rule 137/252: 'xccdf_org.ssgproject.content_rule_selinux_state'
+System will relabel on next boot
+Remediating rule 138/252: 'xccdf_org.ssgproject.content_rule_service_avahi-daemon_disabled'
+Created symlink /etc/systemd/system/avahi-daemon.service → /dev/null.
+avahi-daemon.socket disabled enabled
+Created symlink /etc/systemd/system/avahi-daemon.socket → /dev/null.
+Failed to reset failed state of unit avahi-daemon.service: Unit avahi-daemon.service not loaded.
+Remediating rule 139/252: 'xccdf_org.ssgproject.content_rule_package_cron_installed'
+Remediating rule 140/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_cron_d'
+Remediating rule 141/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_cron_daily'
+Remediating rule 142/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_cron_hourly'
+Remediating rule 143/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_cron_monthly'
+Remediating rule 144/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_cron_weekly'
+Remediating rule 145/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_crontab'
+Remediating rule 146/252: 'xccdf_org.ssgproject.content_rule_file_owner_cron_d'
+Remediating rule 147/252: 'xccdf_org.ssgproject.content_rule_file_owner_cron_daily'
+Remediating rule 148/252: 'xccdf_org.ssgproject.content_rule_file_owner_cron_hourly'
+Remediating rule 149/252: 'xccdf_org.ssgproject.content_rule_file_owner_cron_monthly'
+Remediating rule 150/252: 'xccdf_org.ssgproject.content_rule_file_owner_cron_weekly'
+Remediating rule 151/252: 'xccdf_org.ssgproject.content_rule_file_owner_crontab'
+Remediating rule 152/252: 'xccdf_org.ssgproject.content_rule_file_permissions_cron_d'
+Remediating rule 153/252: 'xccdf_org.ssgproject.content_rule_file_permissions_cron_daily'
+Remediating rule 154/252: 'xccdf_org.ssgproject.content_rule_file_permissions_cron_hourly'
+Remediating rule 155/252: 'xccdf_org.ssgproject.content_rule_file_permissions_cron_monthly'
+Remediating rule 156/252: 'xccdf_org.ssgproject.content_rule_file_permissions_cron_weekly'
+Remediating rule 157/252: 'xccdf_org.ssgproject.content_rule_file_permissions_crontab'
+Remediating rule 158/252: 'xccdf_org.ssgproject.content_rule_file_at_deny_not_exist'
+Remediating rule 159/252: 'xccdf_org.ssgproject.content_rule_file_cron_deny_not_exist'
+Remediating rule 160/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_at_allow'
+stat: cannot statx '/etc/at.allow': No such file or directory
+chgrp: cannot access '/etc/at.allow': No such file or directory
+Remediating rule 161/252: 'xccdf_org.ssgproject.content_rule_file_groupowner_cron_allow'
+stat: cannot statx '/etc/cron.allow': No such file or directory
+chgrp: cannot access '/etc/cron.allow': No such file or directory
+Remediating rule 162/252: 'xccdf_org.ssgproject.content_rule_file_owner_cron_allow'
+stat: cannot statx '/etc/cron.allow': No such file or directory
+chown: cannot access '/etc/cron.allow': No such file or directory
+Remediating rule 163/252: 'xccdf_org.ssgproject.content_rule_file_permissions_at_allow'
+chmod: cannot access '/etc/at.allow': No such file or directory
+Remediating rule 164/252: 'xccdf_org.ssgproject.content_rule_file_permissions_cron_allow'
+chmod: cannot access '/etc/cron.allow': No such file or directory
+Remediating rule 165/252: 'xccdf_org.ssgproject.content_rule_package_dhcp_removed'
+Remediating rule 166/252: 'xccdf_org.ssgproject.content_rule_package_ftp_removed'
+Remediating rule 167/252: 'xccdf_org.ssgproject.content_rule_package_postfix_installed'
+CentOS Stream 9 - BaseOS                        3.1 kB/s | 801  B     00:00    
+CentOS Stream 9 - BaseOS                        1.6 MB/s | 1.6 kB     00:00    
+Importing GPG key 0x8483C65D:
+ Userid     : "CentOS (CentOS Official Signing Key) <security@centos.org>"
+ Fingerprint: 99DB 70FA E1D7 CE22 7FB6 4882 05B5 55B3 8483 C65D
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+CentOS Stream 9 - BaseOS                         16 MB/s | 3.2 MB     00:00    
+CentOS Stream 9 - AppStream                     3.4 kB/s | 801  B     00:00    
+CentOS Stream 9 - AppStream                     1.6 MB/s | 1.6 kB     00:00    
+Importing GPG key 0x8483C65D:
+ Userid     : "CentOS (CentOS Official Signing Key) <security@centos.org>"
+ Fingerprint: 99DB 70FA E1D7 CE22 7FB6 4882 05B5 55B3 8483 C65D
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+CentOS Stream 9 - AppStream                      18 MB/s |  12 MB     00:00    
+CentOS Stream 9 - Extras packages               432  B/s | 488  B     00:01    
+CentOS Stream 9 - Extras packages               2.1 MB/s | 2.1 kB     00:00    
+Importing GPG key 0x1D997668:
+ Userid     : "CentOS Extras SIG (https://wiki.centos.org/SpecialInterestGroup) <security@centos.org>"
+ Fingerprint: 363F C097 2F64 B699 AED3 968E 1FF6 A217 1D99 7668
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Extras-SHA512
+CentOS Stream 9 - Extras packages                15 kB/s |  22 kB     00:01    
+Docker CE Stable - x86_64                        80 kB/s | 2.0 kB     00:00    
+Extra Packages for Enterprise Linux 9 - x86_64  230 kB/s |  21 kB     00:00    
+Extra Packages for Enterprise Linux 9 openh264  1.1 kB/s | 311  B     00:00    
+Extra Packages for Enterprise Linux 9 openh264  1.6 MB/s | 1.6 kB     00:00    
+Importing GPG key 0x3228467C:
+ Userid     : "Fedora (epel9) <epel@fedoraproject.org>"
+ Fingerprint: FF8A D134 4597 106E CE81 3B91 8A38 72BF 3228 467C
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-9
+Extra Packages for Enterprise Linux 9 openh264  566  B/s | 311  B     00:00    
+Errors during downloading metadata for repository 'epel-cisco-openh264':
+  - Status code: 404 for https://codecs.fedoraproject.org/openh264/epel/9/x86_64/os/repodata/repomd.xml.asc (IP: 140.211.169.196)
+  - Status code: 404 for https://codecs.fedoraproject.org/openh264/epel/9/x86_64/os/repodata/repomd.xml.asc (IP: 38.145.32.47)
+Error: Failed to download metadata for repo 'epel-cisco-openh264': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for https://codecs.fedoraproject.org/openh264/epel/9/x86_64/os/repodata/repomd.xml.asc (IP: 140.211.169.196)
+Extra Packages for Enterprise Linux 9 - Next -  139 kB/s |  10 kB     00:00    
+Ignoring repositories: epel-cisco-openh264
+Dependencies resolved.
+================================================================================
+ Package         Architecture   Version                 Repository         Size
+================================================================================
+Installing:
+ postfix         x86_64         2:3.5.25-3.el9          appstream         1.5 M
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 1.5 M
+Installed size: 4.4 M
+Downloading Packages:
+postfix-3.5.25-3.el9.x86_64.rpm                 2.2 MB/s | 1.5 MB     00:00    
+--------------------------------------------------------------------------------
+Total                                           1.7 MB/s | 1.5 MB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Running scriptlet: postfix-2:3.5.25-3.el9.x86_64                          1/1 
+  Installing       : postfix-2:3.5.25-3.el9.x86_64                          1/1 
+  Running scriptlet: postfix-2:3.5.25-3.el9.x86_64                          1/1 
+  Verifying        : postfix-2:3.5.25-3.el9.x86_64                          1/1 
+
+Installed:
+  postfix-2:3.5.25-3.el9.x86_64                                                 
+
+Complete!
+Remediating rule 168/252: 'xccdf_org.ssgproject.content_rule_postfix_network_listening_disabled'
+Remediating rule 169/252: 'xccdf_org.ssgproject.content_rule_service_rpcbind_disabled'
+Failed to stop rpcbind.service: Unit rpcbind.service not loaded.
+Failed to disable unit: Unit file rpcbind.service does not exist.
+Unit rpcbind.service does not exist, proceeding anyway.
+Created symlink /etc/systemd/system/rpcbind.service → /dev/null.
+Failed to reset failed state of unit rpcbind.service: Unit rpcbind.service not loaded.
+Remediating rule 170/252: 'xccdf_org.ssgproject.content_rule_package_chrony_installed'
+Remediating rule 171/252: 'xccdf_org.ssgproject.content_rule_chronyd_specify_remote_server'
+Remediating rule 172/252: 'xccdf_org.ssgproject.content_rule_chronyd_run_as_chrony_user'
+Remediating rule 173/252: 'xccdf_org.ssgproject.content_rule_service_rsyncd_disabled'
+Failed to stop rsyncd.service: Unit rsyncd.service not loaded.
+Failed to disable unit: Unit file rsyncd.service does not exist.
+Unit rsyncd.service does not exist, proceeding anyway.
+Created symlink /etc/systemd/system/rsyncd.service → /dev/null.
+Failed to reset failed state of unit rsyncd.service: Unit rsyncd.service not loaded.
+Remediating rule 174/252: 'xccdf_org.ssgproject.content_rule_package_telnet-server_removed'
+Remediating rule 175/252: 'xccdf_org.ssgproject.content_rule_package_telnet_removed'
+Remediating rule 176/252: 'xccdf_org.ssgproject.content_rule_package_tftp-server_removed'
+Remediating rule 177/252: 'xccdf_org.ssgproject.content_rule_package_tftp_removed'
+Remediating rule 178/252: 'xccdf_org.ssgproject.content_rule_package_net-snmp_removed'
+Remediating rule 179/252: 'xccdf_org.ssgproject.content_rule_file_permissions_sshd_config'
+Remediating rule 180/252: 'xccdf_org.ssgproject.content_rule_file_permissions_sshd_private_key'
+Remediating rule 181/252: 'xccdf_org.ssgproject.content_rule_file_permissions_sshd_pub_key'
+Remediating rule 182/252: 'xccdf_org.ssgproject.content_rule_sshd_set_keepalive'
+Remediating rule 183/252: 'xccdf_org.ssgproject.content_rule_sshd_set_idle_timeout'
+Remediating rule 184/252: 'xccdf_org.ssgproject.content_rule_disable_host_auth'
+Remediating rule 185/252: 'xccdf_org.ssgproject.content_rule_sshd_disable_empty_passwords'
+Remediating rule 186/252: 'xccdf_org.ssgproject.content_rule_sshd_disable_rhosts'
+Remediating rule 187/252: 'xccdf_org.ssgproject.content_rule_sshd_disable_root_login'
+Remediating rule 188/252: 'xccdf_org.ssgproject.content_rule_sshd_disable_tcp_forwarding'
+Remediating rule 189/252: 'xccdf_org.ssgproject.content_rule_sshd_disable_x11_forwarding'
+Remediating rule 190/252: 'xccdf_org.ssgproject.content_rule_sshd_do_not_permit_user_env'
+Remediating rule 191/252: 'xccdf_org.ssgproject.content_rule_sshd_enable_pam'
+Remediating rule 192/252: 'xccdf_org.ssgproject.content_rule_sshd_limit_user_access'
+FIX FOR THIS RULE 'xccdf_org.ssgproject.content_rule_sshd_limit_user_access' IS MISSING!
+Remediating rule 193/252: 'xccdf_org.ssgproject.content_rule_sshd_set_login_grace_time'
+Remediating rule 194/252: 'xccdf_org.ssgproject.content_rule_sshd_set_loglevel_verbose'
+Remediating rule 195/252: 'xccdf_org.ssgproject.content_rule_sshd_set_max_auth_tries'
+Remediating rule 196/252: 'xccdf_org.ssgproject.content_rule_sshd_set_max_sessions'
+Remediating rule 197/252: 'xccdf_org.ssgproject.content_rule_sshd_set_maxstartups'
+Remediating rule 198/252: 'xccdf_org.ssgproject.content_rule_package_audispd-plugins_installed'
+Extra Packages for Enterprise Linux 9 openh264  693  B/s | 311  B     00:00    
+Extra Packages for Enterprise Linux 9 openh264  1.6 MB/s | 1.6 kB     00:00    
+Extra Packages for Enterprise Linux 9 openh264  5.0 kB/s | 311  B     00:00    
+Errors during downloading metadata for repository 'epel-cisco-openh264':
+  - Status code: 404 for https://codecs.fedoraproject.org/openh264/epel/9/x86_64/os/repodata/repomd.xml.asc (IP: 152.2.23.103)
+  - Status code: 404 for https://codecs.fedoraproject.org/openh264/epel/9/x86_64/os/repodata/repomd.xml.asc (IP: 44.205.255.164)
+Error: Failed to download metadata for repo 'epel-cisco-openh264': GPG verification is enabled, but GPG signature is not available. This may be an error or the repository does not support GPG verification: Status code: 404 for https://codecs.fedoraproject.org/openh264/epel/9/x86_64/os/repodata/repomd.xml.asc (IP: 44.205.255.164)
+Ignoring repositories: epel-cisco-openh264
+Last metadata expiration check: 0:00:15 ago on Sat Oct 31 12:12:02 2026.
+Dependencies resolved.
+================================================================================
+ Package                Architecture  Version            Repository        Size
+================================================================================
+Installing:
+ audispd-plugins        x86_64        3.1.5-9.el9        baseos            52 k
+Upgrading:
+ audit                  x86_64        3.1.5-9.el9        baseos           273 k
+ audit-libs             x86_64        3.1.5-9.el9        baseos           120 k
+ python3-audit          x86_64        3.1.5-9.el9        appstream         82 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+Upgrade  3 Packages
+
+Total download size: 527 k
+Downloading Packages:
+(1/4): audispd-plugins-3.1.5-9.el9.x86_64.rpm   673 kB/s |  52 kB     00:00    
+(2/4): audit-libs-3.1.5-9.el9.x86_64.rpm        1.2 MB/s | 120 kB     00:00    
+(3/4): audit-3.1.5-9.el9.x86_64.rpm             2.2 MB/s | 273 kB     00:00    
+(4/4): python3-audit-3.1.5-9.el9.x86_64.rpm     1.8 MB/s |  82 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           1.5 MB/s | 527 kB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Upgrading        : audit-libs-3.1.5-9.el9.x86_64                          1/7 
+  Upgrading        : audit-3.1.5-9.el9.x86_64                               2/7 
+  Running scriptlet: audit-3.1.5-9.el9.x86_64                               2/7 
+Warning: The unit file, source configuration file or drop-ins of auditd.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+
+  Installing       : audispd-plugins-3.1.5-9.el9.x86_64                     3/7 
+  Upgrading        : python3-audit-3.1.5-9.el9.x86_64                       4/7 
+  Cleanup          : python3-audit-3.1.5-7.el9.x86_64                       5/7 
+  Running scriptlet: audit-3.1.5-7.el9.x86_64                               6/7 
+  Cleanup          : audit-3.1.5-7.el9.x86_64                               6/7 
+  Cleanup          : audit-libs-3.1.5-7.el9.x86_64                          7/7 
+  Running scriptlet: audit-libs-3.1.5-7.el9.x86_64                          7/7 
+  Verifying        : audispd-plugins-3.1.5-9.el9.x86_64                     1/7 
+  Verifying        : audit-3.1.5-9.el9.x86_64                               2/7 
+  Verifying        : audit-3.1.5-7.el9.x86_64                               3/7 
+  Verifying        : audit-libs-3.1.5-9.el9.x86_64                          4/7 
+  Verifying        : audit-libs-3.1.5-7.el9.x86_64                          5/7 
+  Verifying        : python3-audit-3.1.5-9.el9.x86_64                       6/7 
+  Verifying        : python3-audit-3.1.5-7.el9.x86_64                       7/7 
+
+Upgraded:
+  audit-3.1.5-9.el9.x86_64                 audit-libs-3.1.5-9.el9.x86_64        
+  python3-audit-3.1.5-9.el9.x86_64        
+Installed:
+  audispd-plugins-3.1.5-9.el9.x86_64                                            
+
+Complete!
+Remediating rule 199/252: 'xccdf_org.ssgproject.content_rule_package_audit_installed'
+Remediating rule 200/252: 'xccdf_org.ssgproject.content_rule_service_auditd_enabled'
+Remediating rule 201/252: 'xccdf_org.ssgproject.content_rule_grub2_audit_argument'
+Remediating rule 202/252: 'xccdf_org.ssgproject.content_rule_grub2_audit_backlog_limit_argument'
+Remediating rule 203/252: 'xccdf_org.ssgproject.content_rule_audit_rules_immutable'
+Remediating rule 204/252: 'xccdf_org.ssgproject.content_rule_audit_rules_mac_modification'
+Remediating rule 205/252: 'xccdf_org.ssgproject.content_rule_audit_rules_media_export'
+Remediating rule 206/252: 'xccdf_org.ssgproject.content_rule_audit_rules_networkconfig_modification'
+Remediating rule 207/252: 'xccdf_org.ssgproject.content_rule_audit_rules_session_events_btmp'
+Remediating rule 208/252: 'xccdf_org.ssgproject.content_rule_audit_rules_session_events_utmp'
+Remediating rule 209/252: 'xccdf_org.ssgproject.content_rule_audit_rules_session_events_wtmp'
+Remediating rule 210/252: 'xccdf_org.ssgproject.content_rule_audit_rules_suid_privilege_function'
+Remediating rule 211/252: 'xccdf_org.ssgproject.content_rule_audit_rules_sysadmin_actions'
+Remediating rule 212/252: 'xccdf_org.ssgproject.content_rule_audit_rules_usergroup_modification_group'
+Remediating rule 213/252: 'xccdf_org.ssgproject.content_rule_audit_rules_usergroup_modification_gshadow'
+Remediating rule 214/252: 'xccdf_org.ssgproject.content_rule_audit_rules_usergroup_modification_opasswd'
+Remediating rule 215/252: 'xccdf_org.ssgproject.content_rule_audit_rules_usergroup_modification_passwd'
+Remediating rule 216/252: 'xccdf_org.ssgproject.content_rule_audit_rules_usergroup_modification_shadow'
+Remediating rule 217/252: 'xccdf_org.ssgproject.content_rule_audit_sudo_log_events'
+Remediating rule 218/252: 'xccdf_org.ssgproject.content_rule_directory_access_var_log_audit'
+Remediating rule 219/252: 'xccdf_org.ssgproject.content_rule_file_group_ownership_var_log_audit'
+log_file = /var/log/audit/audit.log
+Remediating rule 220/252: 'xccdf_org.ssgproject.content_rule_file_ownership_var_log_audit'
+Remediating rule 221/252: 'xccdf_org.ssgproject.content_rule_file_permissions_var_log_audit'
+log_file = /var/log/audit/audit.log
+Remediating rule 222/252: 'xccdf_org.ssgproject.content_rule_audit_rules_dac_modification_chmod'
+Remediating rule 223/252: 'xccdf_org.ssgproject.content_rule_audit_rules_dac_modification_chown'
+Remediating rule 224/252: 'xccdf_org.ssgproject.content_rule_audit_rules_dac_modification_fchmod'
+Remediating rule 225/252: 'xccdf_org.ssgproject.content_rule_audit_rules_dac_modification_fchmodat'
+Remediating rule 226/252: 'xccdf_org.ssgproject.content_rule_audit_rules_dac_modification_fchown'
+Remediating rule 227/252: 'xccdf_org.ssgproject.content_rule_audit_rules_dac_modification_fchownat'
+Remediating rule 228/252: 'xccdf_org.ssgproject.content_rule_audit_rules_dac_modification_fremovexattr'
+Remediating rule 229/252: 'xccdf_org.ssgproject.content_rule_audit_rules_dac_modification_fsetxattr'
+Remediating rule 230/252: 'xccdf_org.ssgproject.content_rule_audit_rules_dac_modification_lchown'
+Remediating rule 231/252: 'xccdf_org.ssgproject.content_rule_audit_rules_dac_modification_lremovexattr'
+Remediating rule 232/252: 'xccdf_org.ssgproject.content_rule_audit_rules_dac_modification_lsetxattr'
+Remediating rule 233/252: 'xccdf_org.ssgproject.content_rule_audit_rules_dac_modification_removexattr'
+Remediating rule 234/252: 'xccdf_org.ssgproject.content_rule_audit_rules_dac_modification_setxattr'
+Remediating rule 235/252: 'xccdf_org.ssgproject.content_rule_audit_rules_file_deletion_events_rename'
+Remediating rule 236/252: 'xccdf_org.ssgproject.content_rule_audit_rules_file_deletion_events_renameat'
+Remediating rule 237/252: 'xccdf_org.ssgproject.content_rule_audit_rules_file_deletion_events_rmdir'
+Remediating rule 238/252: 'xccdf_org.ssgproject.content_rule_audit_rules_file_deletion_events_unlink'
+Remediating rule 239/252: 'xccdf_org.ssgproject.content_rule_audit_rules_file_deletion_events_unlinkat'
+Remediating rule 240/252: 'xccdf_org.ssgproject.content_rule_audit_rules_login_events_faillock'
+Remediating rule 241/252: 'xccdf_org.ssgproject.content_rule_audit_rules_login_events_lastlog'
+Remediating rule 242/252: 'xccdf_org.ssgproject.content_rule_audit_rules_login_events_tallylog'
+Remediating rule 243/252: 'xccdf_org.ssgproject.content_rule_audit_rules_time_adjtimex'
+Remediating rule 244/252: 'xccdf_org.ssgproject.content_rule_audit_rules_time_clock_settime'
+Remediating rule 245/252: 'xccdf_org.ssgproject.content_rule_audit_rules_time_settimeofday'
+Remediating rule 246/252: 'xccdf_org.ssgproject.content_rule_audit_rules_time_stime'
+Remediating rule 247/252: 'xccdf_org.ssgproject.content_rule_audit_rules_time_watch_localtime'
+Remediating rule 248/252: 'xccdf_org.ssgproject.content_rule_auditd_audispd_syslog_plugin_activated'
+Remediating rule 249/252: 'xccdf_org.ssgproject.content_rule_auditd_data_retention_admin_space_left_action'
+Remediating rule 250/252: 'xccdf_org.ssgproject.content_rule_auditd_data_retention_space_left'
+Remediating rule 251/252: 'xccdf_org.ssgproject.content_rule_auditd_data_retention_space_left_action'
+Remediating rule 252/252: 'xccdf_org.ssgproject.content_rule_auditd_name_format'

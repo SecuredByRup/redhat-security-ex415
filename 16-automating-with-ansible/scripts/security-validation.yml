@@ -1,0 +1,42 @@
+---
+- name: Security Configuration Validation
+  hosts: all
+  become: yes
+  tasks:
+    - name: Check SSH root login is disabled
+      shell: grep "^PermitRootLogin no" /etc/ssh/sshd_config
+      register: ssh_root_check
+      failed_when: ssh_root_check.rc != 0
+      
+    - name: Check password authentication is disabled
+      shell: grep "^PasswordAuthentication no" /etc/ssh/sshd_config
+      register: ssh_password_check
+      failed_when: ssh_password_check.rc != 0
+      
+    - name: Verify firewalld is active
+      systemd:
+        name: firewalld
+      register: firewall_status
+      failed_when: firewall_status.status.ActiveState != "active"
+      
+    - name: Check fail2ban is running
+      systemd:
+        name: fail2ban
+      register: fail2ban_status
+      failed_when: fail2ban_status.status.ActiveState != "active"
+      
+    - name: Verify SSH service is running
+      systemd:
+        name: sshd
+      register: sshd_status
+      failed_when: sshd_status.status.ActiveState != "active"
+      
+    - name: Display validation results
+      debug:
+        msg: |
+          Security Validation Results:
+          - SSH Root Login: {{ 'DISABLED' if ssh_root_check.rc == 0 else 'ENABLED' }}
+          - SSH Password Auth: {{ 'DISABLED' if ssh_password_check.rc == 0 else 'ENABLED' }}
+          - Firewall Status: {{ firewall_status.status.ActiveState }}
+          - Fail2ban Status: {{ fail2ban_status.status.ActiveState }}
+          - SSH Service: {{ sshd_status.status.ActiveState }}

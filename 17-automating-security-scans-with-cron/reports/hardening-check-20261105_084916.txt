@@ -1,0 +1,294 @@
+System Hardening Security Check Report
+======================================
+Date: Thu Nov  5 08:49:16 UTC 2026
+Hostname: ip-172-31-10-159.ec2.internal
+System: Linux ip-172-31-10-159.ec2.internal 5.14.0-654.el9.x86_64 #1 SMP PREEMPT_DYNAMIC Fri Dec 19 08:34:59 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+
+Starting system hardening checks...
+=== PASSWORD POLICY CHECKS ===
+Checking /etc/login.defs for password aging...
+#	PASS_MAX_DAYS	Maximum number of days a password may be used.
+#	PASS_MIN_DAYS	Minimum number of days allowed between password changes.
+#	PASS_WARN_AGE	Number of days warning given before a password expires.
+PASS_MAX_DAYS	99999
+PASS_MIN_DAYS	0
+PASS_WARN_AGE	7
+
+=== SSH CONFIGURATION CHECKS ===
+Checking SSH security settings...
+Root login setting:
+#PermitRootLogin prohibit-password
+# the setting of "PermitRootLogin prohibit-password".
+Password authentication setting:
+#PasswordAuthentication yes
+# PasswordAuthentication.  Depending on your PAM configuration,
+# PAM authentication, then enable this but set PasswordAuthentication
+Protocol version:
+
+=== FIREWALL STATUS ===
+Checking firewall status...
+active
+Active firewall zones:
+block
+  target: %%REJECT%%
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: 
+  ports: 
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+
+dmz
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: ssh
+  ports: 
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+
+drop
+  target: DROP
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: 
+  ports: 
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+
+external
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: ssh
+  ports: 
+  protocols: 
+  forward: yes
+  masquerade: yes
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+
+home
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: cockpit dhcpv6-client mdns samba-client ssh
+  ports: 
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+
+internal
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: cockpit dhcpv6-client mdns samba-client ssh
+  ports: 
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+
+nm-shared
+  target: ACCEPT
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: dhcp dns ssh
+  ports: 
+  protocols: icmp ipv6-icmp
+  forward: no
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule priority="32767" reject
+
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: ens5
+  sources: 
+  services: cockpit dhcpv6-client ssh
+  ports: 8443/tcp
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+
+trusted
+  target: ACCEPT
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: 
+  ports: 
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+
+work
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: cockpit dhcpv6-client ssh
+  ports: 
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+
+
+=== FAILED LOGIN ATTEMPTS ===
+Recent failed login attempts (last 10):
+
+btmp begins Thu Nov  5 08:29:18 2026
+
+=== WORLD-WRITABLE FILES CHECK ===
+Searching for world-writable files in critical directories...
+
+=== SUID/SGID FILES ===
+SUID files:
+/usr/bin/at
+/usr/bin/chage
+/usr/bin/chfn
+/usr/bin/chsh
+/usr/bin/crontab
+/usr/bin/gpasswd
+/usr/bin/mount
+/usr/bin/newgrp
+/usr/bin/passwd
+/usr/bin/pkexec
+/usr/bin/su
+/usr/bin/sudo
+/usr/bin/umount
+/usr/bin/fusermount3
+/usr/bin/fusermount
+/usr/bin/vmware-user-suid-wrapper
+/usr/lib/polkit-1/polkit-agent-helper-1
+/usr/libexec/sssd/krb5_child
+/usr/libexec/sssd/ldap_child
+/usr/libexec/sssd/proxy_child
+SGID files:
+/usr/bin/locate
+/usr/bin/write
+/usr/libexec/openssh/ssh-keysign
+/usr/libexec/utempter/utempter
+/usr/sbin/lockdev
+/usr/sbin/postqueue
+/usr/sbin/postdrop
+
+=== SYSTEM UPDATES ===
+Available security updates:
+Last metadata expiration check: 0:16:42 ago on Thu Nov  5 08:32:40 2026.
+
+=== RUNNING SERVICES ===
+Currently running services:
+  UNIT                            LOAD   ACTIVE SUB     DESCRIPTION
+  accounts-daemon.service         loaded active running Accounts Service
+  amazon-cloudwatch-agent.service loaded active running Amazon CloudWatch Agent
+  atd.service                     loaded active running Deferred execution scheduler
+  auditd.service                  loaded active running Security Auditing Service
+  chronyd.service                 loaded active running NTP client/server
+  colord.service                  loaded active running Manage, Install and Generate Color Profiles
+  crond.service                   loaded active running Command Scheduler
+  dbus-broker.service             loaded active running D-Bus System Message Bus
+  dcvserver.service               loaded active running Amazon DCV server daemon
+  dcvsessionlauncher.service      loaded active running Amazon DCV session launcher daemon
+  firewalld.service               loaded active running firewalld - dynamic firewall daemon
+  gdm.service                     loaded active running GNOME Display Manager
+  health-monitor.service          loaded active running Enhanced Health Monitor (900s intervals)
+  irqbalance.service              loaded active running irqbalance daemon
+  libstoragemgmt.service          loaded active running libstoragemgmt plug-in server daemon
+  NetworkManager.service          loaded active running Network Manager
+  polkit.service                  loaded active running Authorization Manager
+  postfix.service                 loaded active running Postfix Mail Transport Agent
+  rsyslog.service                 loaded active running System Logging Service
+  rtkit-daemon.service            loaded active running RealtimeKit Scheduling Policy Service
+  sshd.service                    loaded active running OpenSSH server daemon
+  systemd-journald.service        loaded active running Journal Service
+  systemd-logind.service          loaded active running User Login Management
+  systemd-udevd.service           loaded active running Rule-based Manager for Device Events and Files
+  tuned-ppd.service               loaded active running PPD-to-TuneD API Translation Daemon
+  tuned.service                   loaded active running Dynamic System Tuning Daemon
+  udisks2.service                 loaded active running Disk Manager
+  upower.service                  loaded active running Daemon for power management
+  user@1001.service               loaded active running User Manager for UID 1001
+  user@42.service                 loaded active running User Manager for UID 42
+  wpa_supplicant.service          loaded active running WPA supplicant
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+31 loaded units listed.
+
+=== NETWORK CONNECTIONS ===
+Active network connections:
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8443            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+tcp6       0      0 :::8443                 :::*                    LISTEN     
+tcp6       0      0 ::1:25                  :::*                    LISTEN     
+udp        0      0 0.0.0.0:39753           0.0.0.0:*                          
+udp        0      0 0.0.0.0:8443            0.0.0.0:*                          
+udp        0      0 127.0.0.1:323           0.0.0.0:*                          
+udp6       0      0 :::8443                 :::*                               
+udp6       0      0 ::1:323                 :::*                               
+
+=== USER ACCOUNTS ===
+User accounts with login shells:
+root:x:0:0:root:/root:/bin/bash
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+ec2-user:x:1000:1000:Cloud User:/home/ec2-user:/bin/bash
+centos:x:1001:1001::/home/centos:/bin/bash
+
+=== SUMMARY ===
+Hardening check completed at Thu Nov  5 08:49:22 UTC 2026
+Report saved to: /home/centos/redhat-security-ex415/17-automating-security-scans-with-cron/scripts/../reports/hardening-check-20261105_084916.txt

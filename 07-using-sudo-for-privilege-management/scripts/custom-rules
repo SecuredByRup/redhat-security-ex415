@@ -1,0 +1,24 @@
+# Custom sudo rules for different user groups
+
+# Developers group - can restart web services and view logs
+%developers ALL=(ALL) /bin/systemctl restart httpd, /bin/systemctl restart nginx, /bin/systemctl status httpd, /bin/systemctl status nginx, /usr/bin/tail /var/log/httpd/*, /usr/bin/tail /var/log/nginx/*
+
+# Operators group - can manage system services and view system status
+%operators ALL=(ALL) /bin/systemctl start *, /bin/systemctl stop *, /bin/systemctl restart *, /bin/systemctl status *, /usr/bin/top, /usr/bin/htop, /bin/ps aux
+
+# Auditors group - read-only access to logs and system information
+%auditors ALL=(ALL) NOPASSWD: /usr/bin/tail /var/log/*, /bin/cat /var/log/*, /usr/bin/less /var/log/*, /bin/ps aux, /usr/bin/who, /usr/bin/last
+
+# Specific user rules
+alice ALL=(ALL) /usr/bin/vim /etc/hosts
+bob ALL=(ALL) NOPASSWD: /bin/ls /root/
+
+# Alias definitions for common command groups
+Cmnd_Alias NETWORKING = /sbin/route, /sbin/ifconfig, /bin/ping, /sbin/dhclient, /usr/bin/net, /sbin/iptables, /usr/bin/rfcomm, /usr/bin/wvdial, /sbin/iwconfig, /sbin/mii-tool
+
+# Network administrators
+User_Alias NETADMINS = alice, bob
+NETADMINS ALL = NETWORKING
+
+# Prevent certain dangerous commands
+%developers ALL = !/bin/su, !/usr/bin/passwd root, !/usr/sbin/visudo

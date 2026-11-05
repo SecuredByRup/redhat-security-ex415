@@ -1,0 +1,47 @@
+---
+- name: SSH Security Hardening
+  hosts: all
+  become: yes
+  vars:
+    ssh_config_file: /etc/ssh/sshd_config
+    backup_suffix: ".backup.{{ ansible_date_time.epoch }}"
+  
+  tasks:
+    - name: Backup original SSH configuration
+      copy:
+        src: "{{ ssh_config_file }}"
+        dest: "{{ ssh_config_file }}{{ backup_suffix }}"
+        remote_src: yes
+      
+    - name: Disable root login via SSH
+      lineinfile:
+        path: "{{ ssh_config_file }}"
+        regexp: '^#?PermitRootLogin'
+        line: 'PermitRootLogin no'
+        backup: yes
+      notify: restart sshd
+      
+    - name: Disable password authentication
+      lineinfile:
+        path: "{{ ssh_config_file }}"
+        regexp: '^#?PasswordAuthentication'
+        line: 'PasswordAuthentication no'
+      notify: restart sshd
+      
+    - name: Set maximum authentication attempts
+      lineinfile:
+        path: "{{ ssh_config_file }}"
+        regexp: '^#?MaxAuthTries'
+        line: 'MaxAuthTries 3'
+      notify: restart sshd
+
+    - name: Validate SSH configuration
+      command: sshd -t
+      changed_when: false
+      
+  handlers:
+    - name: restart sshd
+      systemd:
+        name: sshd
+        state: restarted
+        enabled: yes
