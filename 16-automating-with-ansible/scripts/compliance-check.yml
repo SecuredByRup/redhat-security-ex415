@@ -1,0 +1,47 @@
+---
+- name: Security Compliance Verification
+  hosts: all
+  become: yes
+  vars:
+    compliance_report: /tmp/compliance_report.json
+    
+  tasks:
+    - name: Initialize compliance report
+      copy:
+        content: |
+          {
+            "host": "{{ inventory_hostname }}",
+            "timestamp": "{{ ansible_date_time.iso8601 }}",
+            "checks": {}
+          }
+        dest: "{{ compliance_report }}"
+        
+    - name: Check CIS benchmark compliance
+      block:
+        - name: Verify SSH protocol version (allow default or explicit)
+          shell: grep -E "^Protocol 2" /etc/ssh/sshd_config || echo "Protocol 2 is default/omitted"
+          register: ssh_protocol
+          changed_when: false
+          
+        - name: Update compliance report - SSH Protocol
+          lineinfile:
+            path: "{{ compliance_report }}"
+            insertbefore: '  }'
+            line: '    "ssh_protocol_v2": {{ "true" if ssh_protocol.rc == 0 else "false" }},'
+            
+        - name: Check firewall status
+          systemd:
+            name: firewalld
+          register: fw_status
+          
+        - name: Update compliance report - Firewall
+          lineinfile:
+            path: "{{ compliance_report }}"
+            insertbefore: '  }'
+            line: '    "firewall_active": {{ "true" if fw_status.status.ActiveState == "active" else "false" }},'
+            
+    - name: Fetch compliance reports
+      fetch:
+        src: "{{ compliance_report }}"
+        dest: ./compliance/{{ inventory_hostname }}_compliance.json
+        flat: yes

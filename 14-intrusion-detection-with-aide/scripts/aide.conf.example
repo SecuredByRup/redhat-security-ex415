@@ -1,0 +1,66 @@
+# AIDE Configuration File for Security Monitoring
+database_in=file:///var/lib/aide/aide.db.gz
+database_out=file:///var/lib/aide/aide.db.new.gz
+gzip_dbout=yes
+
+# Report settings
+report_url=file:///var/log/aide/aide.log
+report_url=stdout
+
+# Define rule aliases for different types of monitoring
+Binlib = p+u+g+s+m+c+md5+sha256
+ConfFiles = p+u+g+s+m+c+md5+sha256
+Logs = p+u+g+s+growing
+StaticDir = p+u+g
+DynamicDir = p+u+g+s+m+c
+
+# Critical system directories and files
+/boot Binlib
+/bin Binlib
+/sbin Binlib
+/usr/bin Binlib
+/usr/sbin Binlib
+/usr/local/bin Binlib
+/usr/local/sbin Binlib
+
+# Configuration files
+/etc ConfFiles
+!/etc/mtav
+!/etc/adjtime
+!/etc/lvm/cache
+!/etc/lvm/backup
+!/etc/lvm/archive
+
+# Libraries
+/lib Binlib
+/lib64 Binlib
+/usr/lib Binlib
+/usr/lib64 Binlib
+
+# Log directories (monitor for size changes)
+/var/log Logs
+
+# Home directories (basic monitoring)
+/home StaticDir
+/root StaticDir
+
+# System directories
+/opt StaticDir
+/srv StaticDir
+
+# Exclude temporary and dynamic files
+!/tmp
+!/var/tmp
+!/proc
+!/sys
+!/dev
+!/run
+!/var/run
+!/var/lock
+!/var/cache
+!/var/spool
+/opt/test-aide ConfFiles
+/opt/test-aide ConfFiles
+/opt/test-aide ConfFiles
+/opt/test-aide ConfFiles
+/opt/test-aide ConfFiles

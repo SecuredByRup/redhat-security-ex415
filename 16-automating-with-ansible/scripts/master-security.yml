@@ -1,0 +1,28 @@
+---
+- import_playbook: ssh-hardening.yml
+- import_playbook: firewall-hardening.yml  
+- import_playbook: system-hardening.yml
+
+- name: Final Security Validation & Reporting
+  hosts: all
+  become: yes
+  tasks:
+    - name: Generate security report
+      shell: |
+        echo "=== Security Configuration Report ===" > /tmp/security_report.txt
+        echo "Date: $(date)" >> /tmp/security_report.txt
+        echo "" >> /tmp/security_report.txt
+        echo "SSH Configuration:" >> /tmp/security_report.txt
+        grep -E '^(PermitRootLogin|PasswordAuthentication|MaxAuthTries)' /etc/ssh/sshd_config >> /tmp/security_report.txt
+        echo "" >> /tmp/security_report.txt
+        echo "Firewall Status:" >> /tmp/security_report.txt
+        firewall-cmd --state >> /tmp/security_report.txt
+        echo "" >> /tmp/security_report.txt
+        echo "Active Services:" >> /tmp/security_report.txt
+        systemctl list-units --type=service --state=active | grep -E '(sshd|firewalld|fail2ban)' >> /tmp/security_report.txt
+        
+    - name: Fetch security reports to controller
+      fetch:
+        src: /tmp/security_report.txt
+        dest: ./reports/{{ inventory_hostname }}_security_report.txt
+        flat: yes

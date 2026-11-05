@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AIDE Security Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { background-color: #2c3e50; color: white; padding: 20px; border-radius: 5px; }
+        .status-good { background-color: #27ae60; color: white; padding: 10px; border-radius: 5px; margin: 10px 0; }
+        .status-warning { background-color: #f39c12; color: white; padding: 10px; border-radius: 5px; margin: 10px 0; }
+        .status-critical { background-color: #e74c3c; color: white; padding: 10px; border-radius: 5px; margin: 10px 0; }
+        .report-section { border: 1px solid #bdc3c7; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        pre { background-color: #ecf0f1; padding: 10px; border-radius: 3px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AIDE File Integrity Monitoring Dashboard</h1>
+        <p>Real-time security monitoring and intrusion detection</p>
+    </div>
+    
+    <div id="status-section">
+        <h2>Current Status</h2>
+        <div id="status-indicator">Loading...</div>
+    </div>
+    
+    <div class="report-section">
+        <h2>Latest Reports</h2>
+        <div id="reports-list">Loading reports...</div>
+    </div>
+    
+    <div class="report-section">
+        <h2>System Information</h2>
+        <div id="system-info">Loading system information...</div>
+    </div>
+    
+    <script>
+        // Simple JavaScript to load status (in a real implementation, this would fetch from a backend)
+        document.getElementById('status-indicator').innerHTML = '<div class="status-good">System Integrity: CLEAN</div>';
+        document.getElementById('reports-list').innerHTML = '<p>Last check: ' + new Date().toLocaleString() + '</p>';
+        document.getElementById('system-info').innerHTML = '<p>Hostname: ' + window.location.hostname + '</p>';
+    </script>
+</body>
+</html>
