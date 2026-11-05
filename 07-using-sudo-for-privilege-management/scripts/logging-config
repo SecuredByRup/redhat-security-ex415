@@ -1,0 +1,7 @@
+# Enhanced sudo logging configuration
+Defaults log_host, log_year, logfile="/var/log/sudo.log"
+Defaults:alice log_input, log_output
+Defaults:bob log_input, log_output
+Defaults loglinelen=0
+Defaults syslog=authpriv
+Defaults log_allowed, log_denied
