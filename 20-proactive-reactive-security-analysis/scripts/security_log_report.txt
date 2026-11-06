@@ -1,0 +1,856 @@
+=== Security Log Analysis ===
+Generated: Fri Nov  6 07:26:58 UTC 2026
+
+
+
+
+
+=== Failed SSH Attempts ===
+
+=== Sudo Usage ===
+Nov 06 07:15:57 ip-172-31-10-45.ec2.internal sudo[2800]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/systemctl status auditd
+Nov 06 07:15:57 ip-172-31-10-45.ec2.internal sudo[2800]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:07 ip-172-31-10-45.ec2.internal sudo[2800]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:13 ip-172-31-10-45.ec2.internal sudo[2981]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -l
+Nov 06 07:16:13 ip-172-31-10-45.ec2.internal sudo[2981]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:13 ip-172-31-10-45.ec2.internal sudo[2981]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:23 ip-172-31-10-45.ec2.internal sudo[3169]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /etc/passwd -p rwxa -k passwd_changes
+Nov 06 07:16:23 ip-172-31-10-45.ec2.internal sudo[3169]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:23 ip-172-31-10-45.ec2.internal sudo[3169]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:34 ip-172-31-10-45.ec2.internal sudo[3357]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /etc/shadow -p rwxa -k shadow_changes
+Nov 06 07:16:34 ip-172-31-10-45.ec2.internal sudo[3357]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:34 ip-172-31-10-45.ec2.internal sudo[3357]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:44 ip-172-31-10-45.ec2.internal sudo[3546]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /tmp -p wa -k tmp_activity
+Nov 06 07:16:44 ip-172-31-10-45.ec2.internal sudo[3546]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:44 ip-172-31-10-45.ec2.internal sudo[3546]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:05 ip-172-31-10-45.ec2.internal sudo[3735]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /var/log/sudo.log -p wa -k sudo_usage
+Nov 06 07:17:05 ip-172-31-10-45.ec2.internal sudo[3735]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:05 ip-172-31-10-45.ec2.internal sudo[3735]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:16 ip-172-31-10-45.ec2.internal sudo[3923]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S setuid -S setgid -S setreuid -S setregid -k privilege_escalation
+Nov 06 07:17:16 ip-172-31-10-45.ec2.internal sudo[3923]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:16 ip-172-31-10-45.ec2.internal sudo[3923]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:26 ip-172-31-10-45.ec2.internal sudo[4111]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S socket -S connect -S accept -k network_activity
+Nov 06 07:17:26 ip-172-31-10-45.ec2.internal sudo[4111]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:26 ip-172-31-10-45.ec2.internal sudo[4111]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:36 ip-172-31-10-45.ec2.internal sudo[4299]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S unlink -S unlinkat -S rename -S renameat -k file_deletion
+Nov 06 07:17:36 ip-172-31-10-45.ec2.internal sudo[4299]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:36 ip-172-31-10-45.ec2.internal sudo[4299]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:47 ip-172-31-10-45.ec2.internal sudo[4487]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S adjtimex -S settimeofday -S stime -k time_change
+Nov 06 07:17:47 ip-172-31-10-45.ec2.internal sudo[4487]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:47 ip-172-31-10-45.ec2.internal sudo[4487]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:57 ip-172-31-10-45.ec2.internal sudo[4663]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -l
+Nov 06 07:17:57 ip-172-31-10-45.ec2.internal sudo[4663]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:57 ip-172-31-10-45.ec2.internal sudo[4663]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:16 ip-172-31-10-45.ec2.internal sudo[4855]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:16 ip-172-31-10-45.ec2.internal sudo[4855]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:16 ip-172-31-10-45.ec2.internal sudo[4855]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4880]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4880]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4880]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4930]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4930]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4930]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:18 ip-172-31-10-45.ec2.internal sudo[4980]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:18 ip-172-31-10-45.ec2.internal sudo[4980]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:18 ip-172-31-10-45.ec2.internal sudo[4980]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:19 ip-172-31-10-45.ec2.internal sudo[5030]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:19 ip-172-31-10-45.ec2.internal sudo[5030]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:19 ip-172-31-10-45.ec2.internal sudo[5030]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:19:08 ip-172-31-10-45.ec2.internal sudo[5622]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/ls /etc/shadow
+Nov 06 07:19:08 ip-172-31-10-45.ec2.internal sudo[5622]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:19:08 ip-172-31-10-45.ec2.internal sudo[5622]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:19:19 ip-172-31-10-45.ec2.internal sudo[5813]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k passwd_changes
+Nov 06 07:19:19 ip-172-31-10-45.ec2.internal sudo[5813]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:19:19 ip-172-31-10-45.ec2.internal sudo[5813]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:19:29 ip-172-31-10-45.ec2.internal sudo[6002]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -ts recent
+Nov 06 07:19:29 ip-172-31-10-45.ec2.internal sudo[6002]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:19:32 ip-172-31-10-45.ec2.internal sudo[6002]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:04 ip-172-31-10-45.ec2.internal sudo[6190]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -ui
+Nov 06 07:20:04 ip-172-31-10-45.ec2.internal sudo[6190]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:04 ip-172-31-10-45.ec2.internal sudo[6190]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:34 ip-172-31-10-45.ec2.internal sudo[6538]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -ui centos
+Nov 06 07:20:34 ip-172-31-10-45.ec2.internal sudo[6538]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:37 ip-172-31-10-45.ec2.internal sudo[6538]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:44 ip-172-31-10-45.ec2.internal sudo[6725]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -m AVC,USER_AUTH,USER_ACCT,USER_CMD -sv no
+Nov 06 07:20:44 ip-172-31-10-45.ec2.internal sudo[6725]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:44 ip-172-31-10-45.ec2.internal sudo[6725]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:50 ip-172-31-10-45.ec2.internal sudo[6914]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k tmp_activity
+Nov 06 07:20:50 ip-172-31-10-45.ec2.internal sudo[6914]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:50 ip-172-31-10-45.ec2.internal sudo[6914]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:00 ip-172-31-10-45.ec2.internal sudo[7101]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k privilege_escalation -i
+Nov 06 07:21:00 ip-172-31-10-45.ec2.internal sudo[7101]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:00 ip-172-31-10-45.ec2.internal sudo[7101]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:06 ip-172-31-10-45.ec2.internal sudo[7290]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k network_activity -i
+Nov 06 07:21:06 ip-172-31-10-45.ec2.internal sudo[7290]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:10 ip-172-31-10-45.ec2.internal sudo[7290]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:20 ip-172-31-10-45.ec2.internal sudo[7478]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k file_deletion -i
+Nov 06 07:21:20 ip-172-31-10-45.ec2.internal sudo[7478]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:20 ip-172-31-10-45.ec2.internal sudo[7478]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:26 ip-172-31-10-45.ec2.internal sudo[7665]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport
+Nov 06 07:21:26 ip-172-31-10-45.ec2.internal sudo[7665]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:26 ip-172-31-10-45.ec2.internal sudo[7665]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:34 ip-172-31-10-45.ec2.internal sudo[7852]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -au
+Nov 06 07:21:34 ip-172-31-10-45.ec2.internal sudo[7852]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:34 ip-172-31-10-45.ec2.internal sudo[7852]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:42 ip-172-31-10-45.ec2.internal sudo[8039]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -f
+Nov 06 07:21:42 ip-172-31-10-45.ec2.internal sudo[8039]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:42 ip-172-31-10-45.ec2.internal sudo[8039]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:52 ip-172-31-10-45.ec2.internal sudo[8226]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -s
+Nov 06 07:21:52 ip-172-31-10-45.ec2.internal sudo[8226]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:52 ip-172-31-10-45.ec2.internal sudo[8226]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:58 ip-172-31-10-45.ec2.internal sudo[8413]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -x
+Nov 06 07:21:58 ip-172-31-10-45.ec2.internal sudo[8413]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:58 ip-172-31-10-45.ec2.internal sudo[8413]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:07 ip-172-31-10-45.ec2.internal sudo[8601]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport --start recent
+Nov 06 07:22:07 ip-172-31-10-45.ec2.internal sudo[8601]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:07 ip-172-31-10-45.ec2.internal sudo[8601]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:18 ip-172-31-10-45.ec2.internal sudo[8788]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport --summary
+Nov 06 07:22:18 ip-172-31-10-45.ec2.internal sudo[8788]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:18 ip-172-31-10-45.ec2.internal sudo[8788]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:32 ip-172-31-10-45.ec2.internal sudo[8975]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -au --summary
+Nov 06 07:22:32 ip-172-31-10-45.ec2.internal sudo[8975]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:32 ip-172-31-10-45.ec2.internal sudo[8975]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:41 ip-172-31-10-45.ec2.internal sudo[9162]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -f --summary
+Nov 06 07:22:41 ip-172-31-10-45.ec2.internal sudo[9162]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:41 ip-172-31-10-45.ec2.internal sudo[9162]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:53 ip-172-31-10-45.ec2.internal sudo[9349]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -k --summary
+Nov 06 07:22:53 ip-172-31-10-45.ec2.internal sudo[9349]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:53 ip-172-31-10-45.ec2.internal sudo[9349]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:36 ip-172-31-10-45.ec2.internal sudo[10279]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -m USER_AUTH -sv no --start today
+Nov 06 07:24:36 ip-172-31-10-45.ec2.internal sudo[10279]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10279]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10283]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k privilege_escalation --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10283]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10283]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10287]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k file_deletion --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10287]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10287]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10291]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k network_activity --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10291]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10291]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10295]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k sudo_usage --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10295]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10295]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10299]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k passwd_changes -k shadow_changes --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10299]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10299]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:51 ip-172-31-10-45.ec2.internal sudo[10486]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -n 50
+Nov 06 07:24:51 ip-172-31-10-45.ec2.internal sudo[10486]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:57 ip-172-31-10-45.ec2.internal sudo[10486]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:03 ip-172-31-10-45.ec2.internal sudo[10662]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '1 hour ago'
+Nov 06 07:25:03 ip-172-31-10-45.ec2.internal sudo[10662]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:05 ip-172-31-10-45.ec2.internal sudo[10662]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:13 ip-172-31-10-45.ec2.internal sudo[10838]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -u sshd
+Nov 06 07:25:13 ip-172-31-10-45.ec2.internal sudo[10838]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:16 ip-172-31-10-45.ec2.internal sudo[10838]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:22 ip-172-31-10-45.ec2.internal sudo[11030]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -u systemd-logind
+Nov 06 07:25:22 ip-172-31-10-45.ec2.internal sudo[11030]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:27 ip-172-31-10-45.ec2.internal sudo[11030]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:32 ip-172-31-10-45.ec2.internal sudo[11222]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -k
+Nov 06 07:25:32 ip-172-31-10-45.ec2.internal sudo[11222]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:38 ip-172-31-10-45.ec2.internal sudo[11222]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:43 ip-172-31-10-45.ec2.internal sudo[11414]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -f
+Nov 06 07:25:43 ip-172-31-10-45.ec2.internal sudo[11414]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:51 ip-172-31-10-45.ec2.internal sudo[11414]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:57 ip-172-31-10-45.ec2.internal sudo[11589]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:25:57 ip-172-31-10-45.ec2.internal sudo[11589]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:57 ip-172-31-10-45.ec2.internal sudo[11589]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:26:06 ip-172-31-10-45.ec2.internal sudo[11791]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:26:06 ip-172-31-10-45.ec2.internal sudo[11791]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:26:07 ip-172-31-10-45.ec2.internal sudo[11791]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:26:18 ip-172-31-10-45.ec2.internal sudo[11993]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:26:18 ip-172-31-10-45.ec2.internal sudo[11993]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:26:18 ip-172-31-10-45.ec2.internal sudo[11993]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:26:25 ip-172-31-10-45.ec2.internal sudo[12195]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -p err --since '24 hours ago'
+Nov 06 07:26:25 ip-172-31-10-45.ec2.internal sudo[12195]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:26:29 ip-172-31-10-45.ec2.internal sudo[12195]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:27:12 ip-172-31-10-45.ec2.internal sudo[12784]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -u sshd --since '24 hours ago'
+Nov 06 07:27:12 ip-172-31-10-45.ec2.internal sudo[12784]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:27:12 ip-172-31-10-45.ec2.internal sudo[12784]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:27:24 ip-172-31-10-45.ec2.internal sudo[12966]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:27:24 ip-172-31-10-45.ec2.internal sudo[12966]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:15:57 ip-172-31-10-45.ec2.internal sudo[2800]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/systemctl status auditd
+Nov 06 07:15:57 ip-172-31-10-45.ec2.internal sudo[2800]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:07 ip-172-31-10-45.ec2.internal sudo[2800]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:13 ip-172-31-10-45.ec2.internal sudo[2981]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -l
+Nov 06 07:16:13 ip-172-31-10-45.ec2.internal sudo[2981]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:13 ip-172-31-10-45.ec2.internal sudo[2981]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:23 ip-172-31-10-45.ec2.internal sudo[3169]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /etc/passwd -p rwxa -k passwd_changes
+Nov 06 07:16:23 ip-172-31-10-45.ec2.internal sudo[3169]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:23 ip-172-31-10-45.ec2.internal sudo[3169]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:34 ip-172-31-10-45.ec2.internal sudo[3357]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /etc/shadow -p rwxa -k shadow_changes
+Nov 06 07:16:34 ip-172-31-10-45.ec2.internal sudo[3357]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:34 ip-172-31-10-45.ec2.internal sudo[3357]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:44 ip-172-31-10-45.ec2.internal sudo[3546]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /tmp -p wa -k tmp_activity
+Nov 06 07:16:44 ip-172-31-10-45.ec2.internal sudo[3546]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:44 ip-172-31-10-45.ec2.internal sudo[3546]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:05 ip-172-31-10-45.ec2.internal sudo[3735]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /var/log/sudo.log -p wa -k sudo_usage
+Nov 06 07:17:05 ip-172-31-10-45.ec2.internal sudo[3735]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:05 ip-172-31-10-45.ec2.internal sudo[3735]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:16 ip-172-31-10-45.ec2.internal sudo[3923]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S setuid -S setgid -S setreuid -S setregid -k privilege_escalation
+Nov 06 07:17:16 ip-172-31-10-45.ec2.internal sudo[3923]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:16 ip-172-31-10-45.ec2.internal sudo[3923]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:26 ip-172-31-10-45.ec2.internal sudo[4111]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S socket -S connect -S accept -k network_activity
+Nov 06 07:17:26 ip-172-31-10-45.ec2.internal sudo[4111]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:26 ip-172-31-10-45.ec2.internal sudo[4111]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:36 ip-172-31-10-45.ec2.internal sudo[4299]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S unlink -S unlinkat -S rename -S renameat -k file_deletion
+Nov 06 07:17:36 ip-172-31-10-45.ec2.internal sudo[4299]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:36 ip-172-31-10-45.ec2.internal sudo[4299]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:47 ip-172-31-10-45.ec2.internal sudo[4487]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S adjtimex -S settimeofday -S stime -k time_change
+Nov 06 07:17:47 ip-172-31-10-45.ec2.internal sudo[4487]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:47 ip-172-31-10-45.ec2.internal sudo[4487]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:57 ip-172-31-10-45.ec2.internal sudo[4663]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -l
+Nov 06 07:17:57 ip-172-31-10-45.ec2.internal sudo[4663]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:57 ip-172-31-10-45.ec2.internal sudo[4663]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:16 ip-172-31-10-45.ec2.internal sudo[4855]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:16 ip-172-31-10-45.ec2.internal sudo[4855]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:16 ip-172-31-10-45.ec2.internal sudo[4855]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4880]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4880]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4880]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4930]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4930]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4930]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:18 ip-172-31-10-45.ec2.internal sudo[4980]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:18 ip-172-31-10-45.ec2.internal sudo[4980]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:18 ip-172-31-10-45.ec2.internal sudo[4980]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:19 ip-172-31-10-45.ec2.internal sudo[5030]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:19 ip-172-31-10-45.ec2.internal sudo[5030]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:19 ip-172-31-10-45.ec2.internal sudo[5030]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:19:08 ip-172-31-10-45.ec2.internal sudo[5622]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/ls /etc/shadow
+Nov 06 07:19:08 ip-172-31-10-45.ec2.internal sudo[5622]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:19:08 ip-172-31-10-45.ec2.internal sudo[5622]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:19:19 ip-172-31-10-45.ec2.internal sudo[5813]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k passwd_changes
+Nov 06 07:19:19 ip-172-31-10-45.ec2.internal sudo[5813]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:19:19 ip-172-31-10-45.ec2.internal sudo[5813]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:19:29 ip-172-31-10-45.ec2.internal sudo[6002]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -ts recent
+Nov 06 07:19:29 ip-172-31-10-45.ec2.internal sudo[6002]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:19:32 ip-172-31-10-45.ec2.internal sudo[6002]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:04 ip-172-31-10-45.ec2.internal sudo[6190]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -ui
+Nov 06 07:20:04 ip-172-31-10-45.ec2.internal sudo[6190]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:04 ip-172-31-10-45.ec2.internal sudo[6190]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:34 ip-172-31-10-45.ec2.internal sudo[6538]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -ui centos
+Nov 06 07:20:34 ip-172-31-10-45.ec2.internal sudo[6538]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:37 ip-172-31-10-45.ec2.internal sudo[6538]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:44 ip-172-31-10-45.ec2.internal sudo[6725]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -m AVC,USER_AUTH,USER_ACCT,USER_CMD -sv no
+Nov 06 07:20:44 ip-172-31-10-45.ec2.internal sudo[6725]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:44 ip-172-31-10-45.ec2.internal sudo[6725]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:50 ip-172-31-10-45.ec2.internal sudo[6914]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k tmp_activity
+Nov 06 07:20:50 ip-172-31-10-45.ec2.internal sudo[6914]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:50 ip-172-31-10-45.ec2.internal sudo[6914]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:00 ip-172-31-10-45.ec2.internal sudo[7101]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k privilege_escalation -i
+Nov 06 07:21:00 ip-172-31-10-45.ec2.internal sudo[7101]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:00 ip-172-31-10-45.ec2.internal sudo[7101]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:06 ip-172-31-10-45.ec2.internal sudo[7290]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k network_activity -i
+Nov 06 07:21:06 ip-172-31-10-45.ec2.internal sudo[7290]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:10 ip-172-31-10-45.ec2.internal sudo[7290]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:20 ip-172-31-10-45.ec2.internal sudo[7478]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k file_deletion -i
+Nov 06 07:21:20 ip-172-31-10-45.ec2.internal sudo[7478]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:20 ip-172-31-10-45.ec2.internal sudo[7478]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:26 ip-172-31-10-45.ec2.internal sudo[7665]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport
+Nov 06 07:21:26 ip-172-31-10-45.ec2.internal sudo[7665]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:26 ip-172-31-10-45.ec2.internal sudo[7665]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:34 ip-172-31-10-45.ec2.internal sudo[7852]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -au
+Nov 06 07:21:34 ip-172-31-10-45.ec2.internal sudo[7852]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:34 ip-172-31-10-45.ec2.internal sudo[7852]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:42 ip-172-31-10-45.ec2.internal sudo[8039]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -f
+Nov 06 07:21:42 ip-172-31-10-45.ec2.internal sudo[8039]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:42 ip-172-31-10-45.ec2.internal sudo[8039]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:52 ip-172-31-10-45.ec2.internal sudo[8226]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -s
+Nov 06 07:21:52 ip-172-31-10-45.ec2.internal sudo[8226]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:52 ip-172-31-10-45.ec2.internal sudo[8226]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:58 ip-172-31-10-45.ec2.internal sudo[8413]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -x
+Nov 06 07:21:58 ip-172-31-10-45.ec2.internal sudo[8413]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:58 ip-172-31-10-45.ec2.internal sudo[8413]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:07 ip-172-31-10-45.ec2.internal sudo[8601]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport --start recent
+Nov 06 07:22:07 ip-172-31-10-45.ec2.internal sudo[8601]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:07 ip-172-31-10-45.ec2.internal sudo[8601]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:18 ip-172-31-10-45.ec2.internal sudo[8788]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport --summary
+Nov 06 07:22:18 ip-172-31-10-45.ec2.internal sudo[8788]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:18 ip-172-31-10-45.ec2.internal sudo[8788]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:32 ip-172-31-10-45.ec2.internal sudo[8975]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -au --summary
+Nov 06 07:22:32 ip-172-31-10-45.ec2.internal sudo[8975]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:32 ip-172-31-10-45.ec2.internal sudo[8975]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:41 ip-172-31-10-45.ec2.internal sudo[9162]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -f --summary
+Nov 06 07:22:41 ip-172-31-10-45.ec2.internal sudo[9162]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:41 ip-172-31-10-45.ec2.internal sudo[9162]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:53 ip-172-31-10-45.ec2.internal sudo[9349]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -k --summary
+Nov 06 07:22:53 ip-172-31-10-45.ec2.internal sudo[9349]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:53 ip-172-31-10-45.ec2.internal sudo[9349]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:36 ip-172-31-10-45.ec2.internal sudo[10279]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -m USER_AUTH -sv no --start today
+Nov 06 07:24:36 ip-172-31-10-45.ec2.internal sudo[10279]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10279]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10283]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k privilege_escalation --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10283]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10283]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10287]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k file_deletion --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10287]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10287]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10291]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k network_activity --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10291]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10291]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10295]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k sudo_usage --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10295]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10295]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10299]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k passwd_changes -k shadow_changes --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10299]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10299]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:51 ip-172-31-10-45.ec2.internal sudo[10486]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -n 50
+Nov 06 07:24:51 ip-172-31-10-45.ec2.internal sudo[10486]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:57 ip-172-31-10-45.ec2.internal sudo[10486]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:03 ip-172-31-10-45.ec2.internal sudo[10662]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '1 hour ago'
+Nov 06 07:25:03 ip-172-31-10-45.ec2.internal sudo[10662]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:05 ip-172-31-10-45.ec2.internal sudo[10662]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:13 ip-172-31-10-45.ec2.internal sudo[10838]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -u sshd
+Nov 06 07:25:13 ip-172-31-10-45.ec2.internal sudo[10838]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:16 ip-172-31-10-45.ec2.internal sudo[10838]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:22 ip-172-31-10-45.ec2.internal sudo[11030]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -u systemd-logind
+Nov 06 07:25:22 ip-172-31-10-45.ec2.internal sudo[11030]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:27 ip-172-31-10-45.ec2.internal sudo[11030]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:32 ip-172-31-10-45.ec2.internal sudo[11222]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -k
+Nov 06 07:25:32 ip-172-31-10-45.ec2.internal sudo[11222]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:38 ip-172-31-10-45.ec2.internal sudo[11222]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:43 ip-172-31-10-45.ec2.internal sudo[11414]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -f
+Nov 06 07:25:43 ip-172-31-10-45.ec2.internal sudo[11414]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:51 ip-172-31-10-45.ec2.internal sudo[11414]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:57 ip-172-31-10-45.ec2.internal sudo[11589]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:25:57 ip-172-31-10-45.ec2.internal sudo[11589]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:57 ip-172-31-10-45.ec2.internal sudo[11589]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:26:06 ip-172-31-10-45.ec2.internal sudo[11791]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:26:06 ip-172-31-10-45.ec2.internal sudo[11791]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:26:07 ip-172-31-10-45.ec2.internal sudo[11791]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:26:18 ip-172-31-10-45.ec2.internal sudo[11993]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:26:18 ip-172-31-10-45.ec2.internal sudo[11993]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:26:18 ip-172-31-10-45.ec2.internal sudo[11993]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:26:25 ip-172-31-10-45.ec2.internal sudo[12195]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -p err --since '24 hours ago'
+Nov 06 07:26:25 ip-172-31-10-45.ec2.internal sudo[12195]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:26:29 ip-172-31-10-45.ec2.internal sudo[12195]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:27:12 ip-172-31-10-45.ec2.internal sudo[12784]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -u sshd --since '24 hours ago'
+Nov 06 07:27:12 ip-172-31-10-45.ec2.internal sudo[12784]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:27:12 ip-172-31-10-45.ec2.internal sudo[12784]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:27:24 ip-172-31-10-45.ec2.internal sudo[12966]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:27:24 ip-172-31-10-45.ec2.internal sudo[12966]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:27:24 ip-172-31-10-45.ec2.internal sudo[12966]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:15:57 ip-172-31-10-45.ec2.internal sudo[2800]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/systemctl status auditd
+Nov 06 07:15:57 ip-172-31-10-45.ec2.internal sudo[2800]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:07 ip-172-31-10-45.ec2.internal sudo[2800]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:13 ip-172-31-10-45.ec2.internal sudo[2981]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -l
+Nov 06 07:16:13 ip-172-31-10-45.ec2.internal sudo[2981]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:13 ip-172-31-10-45.ec2.internal sudo[2981]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:23 ip-172-31-10-45.ec2.internal sudo[3169]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /etc/passwd -p rwxa -k passwd_changes
+Nov 06 07:16:23 ip-172-31-10-45.ec2.internal sudo[3169]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:23 ip-172-31-10-45.ec2.internal sudo[3169]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:34 ip-172-31-10-45.ec2.internal sudo[3357]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /etc/shadow -p rwxa -k shadow_changes
+Nov 06 07:16:34 ip-172-31-10-45.ec2.internal sudo[3357]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:34 ip-172-31-10-45.ec2.internal sudo[3357]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:44 ip-172-31-10-45.ec2.internal sudo[3546]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /tmp -p wa -k tmp_activity
+Nov 06 07:16:44 ip-172-31-10-45.ec2.internal sudo[3546]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:44 ip-172-31-10-45.ec2.internal sudo[3546]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:05 ip-172-31-10-45.ec2.internal sudo[3735]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /var/log/sudo.log -p wa -k sudo_usage
+Nov 06 07:17:05 ip-172-31-10-45.ec2.internal sudo[3735]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:05 ip-172-31-10-45.ec2.internal sudo[3735]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:16 ip-172-31-10-45.ec2.internal sudo[3923]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S setuid -S setgid -S setreuid -S setregid -k privilege_escalation
+Nov 06 07:17:16 ip-172-31-10-45.ec2.internal sudo[3923]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:16 ip-172-31-10-45.ec2.internal sudo[3923]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:26 ip-172-31-10-45.ec2.internal sudo[4111]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S socket -S connect -S accept -k network_activity
+Nov 06 07:17:26 ip-172-31-10-45.ec2.internal sudo[4111]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:26 ip-172-31-10-45.ec2.internal sudo[4111]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:36 ip-172-31-10-45.ec2.internal sudo[4299]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S unlink -S unlinkat -S rename -S renameat -k file_deletion
+Nov 06 07:17:36 ip-172-31-10-45.ec2.internal sudo[4299]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:36 ip-172-31-10-45.ec2.internal sudo[4299]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:47 ip-172-31-10-45.ec2.internal sudo[4487]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S adjtimex -S settimeofday -S stime -k time_change
+Nov 06 07:17:47 ip-172-31-10-45.ec2.internal sudo[4487]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:47 ip-172-31-10-45.ec2.internal sudo[4487]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:57 ip-172-31-10-45.ec2.internal sudo[4663]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -l
+Nov 06 07:17:57 ip-172-31-10-45.ec2.internal sudo[4663]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:57 ip-172-31-10-45.ec2.internal sudo[4663]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:16 ip-172-31-10-45.ec2.internal sudo[4855]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:16 ip-172-31-10-45.ec2.internal sudo[4855]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:16 ip-172-31-10-45.ec2.internal sudo[4855]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4880]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4880]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4880]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4930]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4930]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4930]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:18 ip-172-31-10-45.ec2.internal sudo[4980]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:18 ip-172-31-10-45.ec2.internal sudo[4980]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:18 ip-172-31-10-45.ec2.internal sudo[4980]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:19 ip-172-31-10-45.ec2.internal sudo[5030]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:19 ip-172-31-10-45.ec2.internal sudo[5030]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:19 ip-172-31-10-45.ec2.internal sudo[5030]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:19:08 ip-172-31-10-45.ec2.internal sudo[5622]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/ls /etc/shadow
+Nov 06 07:19:08 ip-172-31-10-45.ec2.internal sudo[5622]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:19:08 ip-172-31-10-45.ec2.internal sudo[5622]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:19:19 ip-172-31-10-45.ec2.internal sudo[5813]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k passwd_changes
+Nov 06 07:19:19 ip-172-31-10-45.ec2.internal sudo[5813]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:19:19 ip-172-31-10-45.ec2.internal sudo[5813]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:19:29 ip-172-31-10-45.ec2.internal sudo[6002]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -ts recent
+Nov 06 07:19:29 ip-172-31-10-45.ec2.internal sudo[6002]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:19:32 ip-172-31-10-45.ec2.internal sudo[6002]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:04 ip-172-31-10-45.ec2.internal sudo[6190]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -ui
+Nov 06 07:20:04 ip-172-31-10-45.ec2.internal sudo[6190]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:04 ip-172-31-10-45.ec2.internal sudo[6190]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:34 ip-172-31-10-45.ec2.internal sudo[6538]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -ui centos
+Nov 06 07:20:34 ip-172-31-10-45.ec2.internal sudo[6538]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:37 ip-172-31-10-45.ec2.internal sudo[6538]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:44 ip-172-31-10-45.ec2.internal sudo[6725]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -m AVC,USER_AUTH,USER_ACCT,USER_CMD -sv no
+Nov 06 07:20:44 ip-172-31-10-45.ec2.internal sudo[6725]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:44 ip-172-31-10-45.ec2.internal sudo[6725]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:50 ip-172-31-10-45.ec2.internal sudo[6914]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k tmp_activity
+Nov 06 07:20:50 ip-172-31-10-45.ec2.internal sudo[6914]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:50 ip-172-31-10-45.ec2.internal sudo[6914]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:00 ip-172-31-10-45.ec2.internal sudo[7101]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k privilege_escalation -i
+Nov 06 07:21:00 ip-172-31-10-45.ec2.internal sudo[7101]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:00 ip-172-31-10-45.ec2.internal sudo[7101]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:06 ip-172-31-10-45.ec2.internal sudo[7290]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k network_activity -i
+Nov 06 07:21:06 ip-172-31-10-45.ec2.internal sudo[7290]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:10 ip-172-31-10-45.ec2.internal sudo[7290]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:20 ip-172-31-10-45.ec2.internal sudo[7478]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k file_deletion -i
+Nov 06 07:21:20 ip-172-31-10-45.ec2.internal sudo[7478]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:20 ip-172-31-10-45.ec2.internal sudo[7478]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:26 ip-172-31-10-45.ec2.internal sudo[7665]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport
+Nov 06 07:21:26 ip-172-31-10-45.ec2.internal sudo[7665]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:26 ip-172-31-10-45.ec2.internal sudo[7665]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:34 ip-172-31-10-45.ec2.internal sudo[7852]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -au
+Nov 06 07:21:34 ip-172-31-10-45.ec2.internal sudo[7852]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:34 ip-172-31-10-45.ec2.internal sudo[7852]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:42 ip-172-31-10-45.ec2.internal sudo[8039]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -f
+Nov 06 07:21:42 ip-172-31-10-45.ec2.internal sudo[8039]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:42 ip-172-31-10-45.ec2.internal sudo[8039]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:52 ip-172-31-10-45.ec2.internal sudo[8226]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -s
+Nov 06 07:21:52 ip-172-31-10-45.ec2.internal sudo[8226]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:52 ip-172-31-10-45.ec2.internal sudo[8226]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:58 ip-172-31-10-45.ec2.internal sudo[8413]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -x
+Nov 06 07:21:58 ip-172-31-10-45.ec2.internal sudo[8413]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:58 ip-172-31-10-45.ec2.internal sudo[8413]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:07 ip-172-31-10-45.ec2.internal sudo[8601]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport --start recent
+Nov 06 07:22:07 ip-172-31-10-45.ec2.internal sudo[8601]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:07 ip-172-31-10-45.ec2.internal sudo[8601]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:18 ip-172-31-10-45.ec2.internal sudo[8788]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport --summary
+Nov 06 07:22:18 ip-172-31-10-45.ec2.internal sudo[8788]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:18 ip-172-31-10-45.ec2.internal sudo[8788]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:32 ip-172-31-10-45.ec2.internal sudo[8975]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -au --summary
+Nov 06 07:22:32 ip-172-31-10-45.ec2.internal sudo[8975]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:32 ip-172-31-10-45.ec2.internal sudo[8975]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:41 ip-172-31-10-45.ec2.internal sudo[9162]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -f --summary
+Nov 06 07:22:41 ip-172-31-10-45.ec2.internal sudo[9162]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:41 ip-172-31-10-45.ec2.internal sudo[9162]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:53 ip-172-31-10-45.ec2.internal sudo[9349]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -k --summary
+Nov 06 07:22:53 ip-172-31-10-45.ec2.internal sudo[9349]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:53 ip-172-31-10-45.ec2.internal sudo[9349]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:36 ip-172-31-10-45.ec2.internal sudo[10279]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -m USER_AUTH -sv no --start today
+Nov 06 07:24:36 ip-172-31-10-45.ec2.internal sudo[10279]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10279]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10283]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k privilege_escalation --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10283]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10283]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10287]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k file_deletion --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10287]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10287]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10291]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k network_activity --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10291]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10291]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10295]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k sudo_usage --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10295]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10295]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10299]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k passwd_changes -k shadow_changes --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10299]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10299]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:51 ip-172-31-10-45.ec2.internal sudo[10486]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -n 50
+Nov 06 07:24:51 ip-172-31-10-45.ec2.internal sudo[10486]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:57 ip-172-31-10-45.ec2.internal sudo[10486]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:03 ip-172-31-10-45.ec2.internal sudo[10662]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '1 hour ago'
+Nov 06 07:25:03 ip-172-31-10-45.ec2.internal sudo[10662]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:05 ip-172-31-10-45.ec2.internal sudo[10662]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:13 ip-172-31-10-45.ec2.internal sudo[10838]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -u sshd
+Nov 06 07:25:13 ip-172-31-10-45.ec2.internal sudo[10838]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:16 ip-172-31-10-45.ec2.internal sudo[10838]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:22 ip-172-31-10-45.ec2.internal sudo[11030]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -u systemd-logind
+Nov 06 07:25:22 ip-172-31-10-45.ec2.internal sudo[11030]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:27 ip-172-31-10-45.ec2.internal sudo[11030]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:32 ip-172-31-10-45.ec2.internal sudo[11222]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -k
+Nov 06 07:25:32 ip-172-31-10-45.ec2.internal sudo[11222]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:38 ip-172-31-10-45.ec2.internal sudo[11222]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:43 ip-172-31-10-45.ec2.internal sudo[11414]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -f
+Nov 06 07:25:43 ip-172-31-10-45.ec2.internal sudo[11414]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:51 ip-172-31-10-45.ec2.internal sudo[11414]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:57 ip-172-31-10-45.ec2.internal sudo[11589]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:25:57 ip-172-31-10-45.ec2.internal sudo[11589]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:57 ip-172-31-10-45.ec2.internal sudo[11589]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:26:06 ip-172-31-10-45.ec2.internal sudo[11791]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:26:06 ip-172-31-10-45.ec2.internal sudo[11791]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:26:07 ip-172-31-10-45.ec2.internal sudo[11791]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:26:18 ip-172-31-10-45.ec2.internal sudo[11993]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:26:18 ip-172-31-10-45.ec2.internal sudo[11993]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:26:18 ip-172-31-10-45.ec2.internal sudo[11993]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:26:25 ip-172-31-10-45.ec2.internal sudo[12195]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -p err --since '24 hours ago'
+Nov 06 07:26:25 ip-172-31-10-45.ec2.internal sudo[12195]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:26:29 ip-172-31-10-45.ec2.internal sudo[12195]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:27:12 ip-172-31-10-45.ec2.internal sudo[12784]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -u sshd --since '24 hours ago'
+Nov 06 07:27:12 ip-172-31-10-45.ec2.internal sudo[12784]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:27:12 ip-172-31-10-45.ec2.internal sudo[12784]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:27:24 ip-172-31-10-45.ec2.internal sudo[12966]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:27:24 ip-172-31-10-45.ec2.internal sudo[12966]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:27:24 ip-172-31-10-45.ec2.internal sudo[12966]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:15:57 ip-172-31-10-45.ec2.internal sudo[2800]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/systemctl status auditd
+Nov 06 07:15:57 ip-172-31-10-45.ec2.internal sudo[2800]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:07 ip-172-31-10-45.ec2.internal sudo[2800]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:13 ip-172-31-10-45.ec2.internal sudo[2981]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -l
+Nov 06 07:16:13 ip-172-31-10-45.ec2.internal sudo[2981]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:13 ip-172-31-10-45.ec2.internal sudo[2981]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:23 ip-172-31-10-45.ec2.internal sudo[3169]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /etc/passwd -p rwxa -k passwd_changes
+Nov 06 07:16:23 ip-172-31-10-45.ec2.internal sudo[3169]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:23 ip-172-31-10-45.ec2.internal sudo[3169]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:34 ip-172-31-10-45.ec2.internal sudo[3357]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /etc/shadow -p rwxa -k shadow_changes
+Nov 06 07:16:34 ip-172-31-10-45.ec2.internal sudo[3357]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:34 ip-172-31-10-45.ec2.internal sudo[3357]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:44 ip-172-31-10-45.ec2.internal sudo[3546]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /tmp -p wa -k tmp_activity
+Nov 06 07:16:44 ip-172-31-10-45.ec2.internal sudo[3546]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:44 ip-172-31-10-45.ec2.internal sudo[3546]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:05 ip-172-31-10-45.ec2.internal sudo[3735]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /var/log/sudo.log -p wa -k sudo_usage
+Nov 06 07:17:05 ip-172-31-10-45.ec2.internal sudo[3735]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:05 ip-172-31-10-45.ec2.internal sudo[3735]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:16 ip-172-31-10-45.ec2.internal sudo[3923]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S setuid -S setgid -S setreuid -S setregid -k privilege_escalation
+Nov 06 07:17:16 ip-172-31-10-45.ec2.internal sudo[3923]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:16 ip-172-31-10-45.ec2.internal sudo[3923]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:26 ip-172-31-10-45.ec2.internal sudo[4111]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S socket -S connect -S accept -k network_activity
+Nov 06 07:17:26 ip-172-31-10-45.ec2.internal sudo[4111]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:26 ip-172-31-10-45.ec2.internal sudo[4111]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:36 ip-172-31-10-45.ec2.internal sudo[4299]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S unlink -S unlinkat -S rename -S renameat -k file_deletion
+Nov 06 07:17:36 ip-172-31-10-45.ec2.internal sudo[4299]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:36 ip-172-31-10-45.ec2.internal sudo[4299]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:47 ip-172-31-10-45.ec2.internal sudo[4487]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S adjtimex -S settimeofday -S stime -k time_change
+Nov 06 07:17:47 ip-172-31-10-45.ec2.internal sudo[4487]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:47 ip-172-31-10-45.ec2.internal sudo[4487]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:57 ip-172-31-10-45.ec2.internal sudo[4663]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -l
+Nov 06 07:17:57 ip-172-31-10-45.ec2.internal sudo[4663]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:57 ip-172-31-10-45.ec2.internal sudo[4663]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:16 ip-172-31-10-45.ec2.internal sudo[4855]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:16 ip-172-31-10-45.ec2.internal sudo[4855]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:16 ip-172-31-10-45.ec2.internal sudo[4855]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4880]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4880]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4880]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4930]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4930]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4930]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:18 ip-172-31-10-45.ec2.internal sudo[4980]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:18 ip-172-31-10-45.ec2.internal sudo[4980]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:18 ip-172-31-10-45.ec2.internal sudo[4980]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:19 ip-172-31-10-45.ec2.internal sudo[5030]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:19 ip-172-31-10-45.ec2.internal sudo[5030]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:19 ip-172-31-10-45.ec2.internal sudo[5030]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:19:08 ip-172-31-10-45.ec2.internal sudo[5622]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/ls /etc/shadow
+Nov 06 07:19:08 ip-172-31-10-45.ec2.internal sudo[5622]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:19:08 ip-172-31-10-45.ec2.internal sudo[5622]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:19:19 ip-172-31-10-45.ec2.internal sudo[5813]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k passwd_changes
+Nov 06 07:19:19 ip-172-31-10-45.ec2.internal sudo[5813]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:19:19 ip-172-31-10-45.ec2.internal sudo[5813]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:19:29 ip-172-31-10-45.ec2.internal sudo[6002]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -ts recent
+Nov 06 07:19:29 ip-172-31-10-45.ec2.internal sudo[6002]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:19:32 ip-172-31-10-45.ec2.internal sudo[6002]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:04 ip-172-31-10-45.ec2.internal sudo[6190]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -ui
+Nov 06 07:20:04 ip-172-31-10-45.ec2.internal sudo[6190]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:04 ip-172-31-10-45.ec2.internal sudo[6190]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:34 ip-172-31-10-45.ec2.internal sudo[6538]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -ui centos
+Nov 06 07:20:34 ip-172-31-10-45.ec2.internal sudo[6538]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:37 ip-172-31-10-45.ec2.internal sudo[6538]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:44 ip-172-31-10-45.ec2.internal sudo[6725]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -m AVC,USER_AUTH,USER_ACCT,USER_CMD -sv no
+Nov 06 07:20:44 ip-172-31-10-45.ec2.internal sudo[6725]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:44 ip-172-31-10-45.ec2.internal sudo[6725]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:50 ip-172-31-10-45.ec2.internal sudo[6914]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k tmp_activity
+Nov 06 07:20:50 ip-172-31-10-45.ec2.internal sudo[6914]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:50 ip-172-31-10-45.ec2.internal sudo[6914]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:00 ip-172-31-10-45.ec2.internal sudo[7101]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k privilege_escalation -i
+Nov 06 07:21:00 ip-172-31-10-45.ec2.internal sudo[7101]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:00 ip-172-31-10-45.ec2.internal sudo[7101]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:06 ip-172-31-10-45.ec2.internal sudo[7290]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k network_activity -i
+Nov 06 07:21:06 ip-172-31-10-45.ec2.internal sudo[7290]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:10 ip-172-31-10-45.ec2.internal sudo[7290]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:20 ip-172-31-10-45.ec2.internal sudo[7478]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k file_deletion -i
+Nov 06 07:21:20 ip-172-31-10-45.ec2.internal sudo[7478]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:20 ip-172-31-10-45.ec2.internal sudo[7478]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:26 ip-172-31-10-45.ec2.internal sudo[7665]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport
+Nov 06 07:21:26 ip-172-31-10-45.ec2.internal sudo[7665]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:26 ip-172-31-10-45.ec2.internal sudo[7665]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:34 ip-172-31-10-45.ec2.internal sudo[7852]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -au
+Nov 06 07:21:34 ip-172-31-10-45.ec2.internal sudo[7852]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:34 ip-172-31-10-45.ec2.internal sudo[7852]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:42 ip-172-31-10-45.ec2.internal sudo[8039]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -f
+Nov 06 07:21:42 ip-172-31-10-45.ec2.internal sudo[8039]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:42 ip-172-31-10-45.ec2.internal sudo[8039]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:52 ip-172-31-10-45.ec2.internal sudo[8226]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -s
+Nov 06 07:21:52 ip-172-31-10-45.ec2.internal sudo[8226]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:52 ip-172-31-10-45.ec2.internal sudo[8226]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:58 ip-172-31-10-45.ec2.internal sudo[8413]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -x
+Nov 06 07:21:58 ip-172-31-10-45.ec2.internal sudo[8413]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:58 ip-172-31-10-45.ec2.internal sudo[8413]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:07 ip-172-31-10-45.ec2.internal sudo[8601]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport --start recent
+Nov 06 07:22:07 ip-172-31-10-45.ec2.internal sudo[8601]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:07 ip-172-31-10-45.ec2.internal sudo[8601]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:18 ip-172-31-10-45.ec2.internal sudo[8788]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport --summary
+Nov 06 07:22:18 ip-172-31-10-45.ec2.internal sudo[8788]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:18 ip-172-31-10-45.ec2.internal sudo[8788]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:32 ip-172-31-10-45.ec2.internal sudo[8975]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -au --summary
+Nov 06 07:22:32 ip-172-31-10-45.ec2.internal sudo[8975]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:32 ip-172-31-10-45.ec2.internal sudo[8975]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:41 ip-172-31-10-45.ec2.internal sudo[9162]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -f --summary
+Nov 06 07:22:41 ip-172-31-10-45.ec2.internal sudo[9162]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:41 ip-172-31-10-45.ec2.internal sudo[9162]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:53 ip-172-31-10-45.ec2.internal sudo[9349]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -k --summary
+Nov 06 07:22:53 ip-172-31-10-45.ec2.internal sudo[9349]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:53 ip-172-31-10-45.ec2.internal sudo[9349]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:36 ip-172-31-10-45.ec2.internal sudo[10279]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -m USER_AUTH -sv no --start today
+Nov 06 07:24:36 ip-172-31-10-45.ec2.internal sudo[10279]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10279]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10283]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k privilege_escalation --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10283]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10283]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10287]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k file_deletion --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10287]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10287]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10291]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k network_activity --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10291]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10291]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10295]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k sudo_usage --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10295]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10295]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10299]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k passwd_changes -k shadow_changes --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10299]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10299]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:51 ip-172-31-10-45.ec2.internal sudo[10486]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -n 50
+Nov 06 07:24:51 ip-172-31-10-45.ec2.internal sudo[10486]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:57 ip-172-31-10-45.ec2.internal sudo[10486]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:03 ip-172-31-10-45.ec2.internal sudo[10662]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '1 hour ago'
+Nov 06 07:25:03 ip-172-31-10-45.ec2.internal sudo[10662]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:05 ip-172-31-10-45.ec2.internal sudo[10662]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:13 ip-172-31-10-45.ec2.internal sudo[10838]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -u sshd
+Nov 06 07:25:13 ip-172-31-10-45.ec2.internal sudo[10838]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:16 ip-172-31-10-45.ec2.internal sudo[10838]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:22 ip-172-31-10-45.ec2.internal sudo[11030]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -u systemd-logind
+Nov 06 07:25:22 ip-172-31-10-45.ec2.internal sudo[11030]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:27 ip-172-31-10-45.ec2.internal sudo[11030]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:32 ip-172-31-10-45.ec2.internal sudo[11222]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -k
+Nov 06 07:25:32 ip-172-31-10-45.ec2.internal sudo[11222]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:38 ip-172-31-10-45.ec2.internal sudo[11222]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:43 ip-172-31-10-45.ec2.internal sudo[11414]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -f
+Nov 06 07:25:43 ip-172-31-10-45.ec2.internal sudo[11414]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:51 ip-172-31-10-45.ec2.internal sudo[11414]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:57 ip-172-31-10-45.ec2.internal sudo[11589]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:25:57 ip-172-31-10-45.ec2.internal sudo[11589]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:57 ip-172-31-10-45.ec2.internal sudo[11589]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:26:06 ip-172-31-10-45.ec2.internal sudo[11791]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:26:06 ip-172-31-10-45.ec2.internal sudo[11791]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:26:07 ip-172-31-10-45.ec2.internal sudo[11791]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:26:18 ip-172-31-10-45.ec2.internal sudo[11993]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:26:18 ip-172-31-10-45.ec2.internal sudo[11993]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:26:18 ip-172-31-10-45.ec2.internal sudo[11993]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:26:25 ip-172-31-10-45.ec2.internal sudo[12195]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -p err --since '24 hours ago'
+Nov 06 07:26:25 ip-172-31-10-45.ec2.internal sudo[12195]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:26:29 ip-172-31-10-45.ec2.internal sudo[12195]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:27:12 ip-172-31-10-45.ec2.internal sudo[12784]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -u sshd --since '24 hours ago'
+Nov 06 07:27:12 ip-172-31-10-45.ec2.internal sudo[12784]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:27:12 ip-172-31-10-45.ec2.internal sudo[12784]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:27:24 ip-172-31-10-45.ec2.internal sudo[12966]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:27:24 ip-172-31-10-45.ec2.internal sudo[12966]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:27:24 ip-172-31-10-45.ec2.internal sudo[12966]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:15:57 ip-172-31-10-45.ec2.internal sudo[2800]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/systemctl status auditd
+Nov 06 07:15:57 ip-172-31-10-45.ec2.internal sudo[2800]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:07 ip-172-31-10-45.ec2.internal sudo[2800]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:13 ip-172-31-10-45.ec2.internal sudo[2981]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -l
+Nov 06 07:16:13 ip-172-31-10-45.ec2.internal sudo[2981]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:13 ip-172-31-10-45.ec2.internal sudo[2981]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:23 ip-172-31-10-45.ec2.internal sudo[3169]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /etc/passwd -p rwxa -k passwd_changes
+Nov 06 07:16:23 ip-172-31-10-45.ec2.internal sudo[3169]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:23 ip-172-31-10-45.ec2.internal sudo[3169]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:34 ip-172-31-10-45.ec2.internal sudo[3357]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /etc/shadow -p rwxa -k shadow_changes
+Nov 06 07:16:34 ip-172-31-10-45.ec2.internal sudo[3357]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:34 ip-172-31-10-45.ec2.internal sudo[3357]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:16:44 ip-172-31-10-45.ec2.internal sudo[3546]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /tmp -p wa -k tmp_activity
+Nov 06 07:16:44 ip-172-31-10-45.ec2.internal sudo[3546]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:16:44 ip-172-31-10-45.ec2.internal sudo[3546]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:05 ip-172-31-10-45.ec2.internal sudo[3735]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -w /var/log/sudo.log -p wa -k sudo_usage
+Nov 06 07:17:05 ip-172-31-10-45.ec2.internal sudo[3735]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:05 ip-172-31-10-45.ec2.internal sudo[3735]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:16 ip-172-31-10-45.ec2.internal sudo[3923]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S setuid -S setgid -S setreuid -S setregid -k privilege_escalation
+Nov 06 07:17:16 ip-172-31-10-45.ec2.internal sudo[3923]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:16 ip-172-31-10-45.ec2.internal sudo[3923]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:26 ip-172-31-10-45.ec2.internal sudo[4111]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S socket -S connect -S accept -k network_activity
+Nov 06 07:17:26 ip-172-31-10-45.ec2.internal sudo[4111]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:26 ip-172-31-10-45.ec2.internal sudo[4111]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:36 ip-172-31-10-45.ec2.internal sudo[4299]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S unlink -S unlinkat -S rename -S renameat -k file_deletion
+Nov 06 07:17:36 ip-172-31-10-45.ec2.internal sudo[4299]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:36 ip-172-31-10-45.ec2.internal sudo[4299]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:47 ip-172-31-10-45.ec2.internal sudo[4487]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -a always,exit -F arch=b64 -S adjtimex -S settimeofday -S stime -k time_change
+Nov 06 07:17:47 ip-172-31-10-45.ec2.internal sudo[4487]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:47 ip-172-31-10-45.ec2.internal sudo[4487]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:17:57 ip-172-31-10-45.ec2.internal sudo[4663]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/auditctl -l
+Nov 06 07:17:57 ip-172-31-10-45.ec2.internal sudo[4663]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:17:57 ip-172-31-10-45.ec2.internal sudo[4663]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:16 ip-172-31-10-45.ec2.internal sudo[4855]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:16 ip-172-31-10-45.ec2.internal sudo[4855]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:16 ip-172-31-10-45.ec2.internal sudo[4855]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4880]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4880]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4880]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4930]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4930]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:17 ip-172-31-10-45.ec2.internal sudo[4930]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:18 ip-172-31-10-45.ec2.internal sudo[4980]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:18 ip-172-31-10-45.ec2.internal sudo[4980]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:18 ip-172-31-10-45.ec2.internal sudo[4980]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:18:19 ip-172-31-10-45.ec2.internal sudo[5030]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/tee -a /etc/hosts
+Nov 06 07:18:19 ip-172-31-10-45.ec2.internal sudo[5030]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:18:19 ip-172-31-10-45.ec2.internal sudo[5030]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:19:08 ip-172-31-10-45.ec2.internal sudo[5622]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/ls /etc/shadow
+Nov 06 07:19:08 ip-172-31-10-45.ec2.internal sudo[5622]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:19:08 ip-172-31-10-45.ec2.internal sudo[5622]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:19:19 ip-172-31-10-45.ec2.internal sudo[5813]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k passwd_changes
+Nov 06 07:19:19 ip-172-31-10-45.ec2.internal sudo[5813]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:19:19 ip-172-31-10-45.ec2.internal sudo[5813]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:19:29 ip-172-31-10-45.ec2.internal sudo[6002]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -ts recent
+Nov 06 07:19:29 ip-172-31-10-45.ec2.internal sudo[6002]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:19:32 ip-172-31-10-45.ec2.internal sudo[6002]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:04 ip-172-31-10-45.ec2.internal sudo[6190]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -ui
+Nov 06 07:20:04 ip-172-31-10-45.ec2.internal sudo[6190]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:04 ip-172-31-10-45.ec2.internal sudo[6190]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:34 ip-172-31-10-45.ec2.internal sudo[6538]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -ui centos
+Nov 06 07:20:34 ip-172-31-10-45.ec2.internal sudo[6538]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:37 ip-172-31-10-45.ec2.internal sudo[6538]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:44 ip-172-31-10-45.ec2.internal sudo[6725]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -m AVC,USER_AUTH,USER_ACCT,USER_CMD -sv no
+Nov 06 07:20:44 ip-172-31-10-45.ec2.internal sudo[6725]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:44 ip-172-31-10-45.ec2.internal sudo[6725]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:20:50 ip-172-31-10-45.ec2.internal sudo[6914]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k tmp_activity
+Nov 06 07:20:50 ip-172-31-10-45.ec2.internal sudo[6914]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:20:50 ip-172-31-10-45.ec2.internal sudo[6914]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:00 ip-172-31-10-45.ec2.internal sudo[7101]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k privilege_escalation -i
+Nov 06 07:21:00 ip-172-31-10-45.ec2.internal sudo[7101]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:00 ip-172-31-10-45.ec2.internal sudo[7101]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:06 ip-172-31-10-45.ec2.internal sudo[7290]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k network_activity -i
+Nov 06 07:21:06 ip-172-31-10-45.ec2.internal sudo[7290]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:10 ip-172-31-10-45.ec2.internal sudo[7290]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:20 ip-172-31-10-45.ec2.internal sudo[7478]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/ausearch -k file_deletion -i
+Nov 06 07:21:20 ip-172-31-10-45.ec2.internal sudo[7478]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:20 ip-172-31-10-45.ec2.internal sudo[7478]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:26 ip-172-31-10-45.ec2.internal sudo[7665]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport
+Nov 06 07:21:26 ip-172-31-10-45.ec2.internal sudo[7665]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:26 ip-172-31-10-45.ec2.internal sudo[7665]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:34 ip-172-31-10-45.ec2.internal sudo[7852]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -au
+Nov 06 07:21:34 ip-172-31-10-45.ec2.internal sudo[7852]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:34 ip-172-31-10-45.ec2.internal sudo[7852]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:42 ip-172-31-10-45.ec2.internal sudo[8039]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -f
+Nov 06 07:21:42 ip-172-31-10-45.ec2.internal sudo[8039]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:42 ip-172-31-10-45.ec2.internal sudo[8039]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:52 ip-172-31-10-45.ec2.internal sudo[8226]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -s
+Nov 06 07:21:52 ip-172-31-10-45.ec2.internal sudo[8226]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:52 ip-172-31-10-45.ec2.internal sudo[8226]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:21:58 ip-172-31-10-45.ec2.internal sudo[8413]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -x
+Nov 06 07:21:58 ip-172-31-10-45.ec2.internal sudo[8413]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:21:58 ip-172-31-10-45.ec2.internal sudo[8413]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:07 ip-172-31-10-45.ec2.internal sudo[8601]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport --start recent
+Nov 06 07:22:07 ip-172-31-10-45.ec2.internal sudo[8601]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:07 ip-172-31-10-45.ec2.internal sudo[8601]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:18 ip-172-31-10-45.ec2.internal sudo[8788]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport --summary
+Nov 06 07:22:18 ip-172-31-10-45.ec2.internal sudo[8788]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:18 ip-172-31-10-45.ec2.internal sudo[8788]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:32 ip-172-31-10-45.ec2.internal sudo[8975]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -au --summary
+Nov 06 07:22:32 ip-172-31-10-45.ec2.internal sudo[8975]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:32 ip-172-31-10-45.ec2.internal sudo[8975]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:41 ip-172-31-10-45.ec2.internal sudo[9162]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -f --summary
+Nov 06 07:22:41 ip-172-31-10-45.ec2.internal sudo[9162]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:41 ip-172-31-10-45.ec2.internal sudo[9162]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:22:53 ip-172-31-10-45.ec2.internal sudo[9349]:   centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/sbin/aureport -k --summary
+Nov 06 07:22:53 ip-172-31-10-45.ec2.internal sudo[9349]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:22:53 ip-172-31-10-45.ec2.internal sudo[9349]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:36 ip-172-31-10-45.ec2.internal sudo[10279]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -m USER_AUTH -sv no --start today
+Nov 06 07:24:36 ip-172-31-10-45.ec2.internal sudo[10279]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10279]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10283]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k privilege_escalation --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10283]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10283]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10287]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k file_deletion --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10287]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10287]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10291]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k network_activity --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10291]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10291]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10295]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k sudo_usage --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10295]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10295]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10299]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/sbin/ausearch -k passwd_changes -k shadow_changes --start today
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10299]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:37 ip-172-31-10-45.ec2.internal sudo[10299]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:24:51 ip-172-31-10-45.ec2.internal sudo[10486]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -n 50
+Nov 06 07:24:51 ip-172-31-10-45.ec2.internal sudo[10486]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:24:57 ip-172-31-10-45.ec2.internal sudo[10486]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:03 ip-172-31-10-45.ec2.internal sudo[10662]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '1 hour ago'
+Nov 06 07:25:03 ip-172-31-10-45.ec2.internal sudo[10662]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:05 ip-172-31-10-45.ec2.internal sudo[10662]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:13 ip-172-31-10-45.ec2.internal sudo[10838]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -u sshd
+Nov 06 07:25:13 ip-172-31-10-45.ec2.internal sudo[10838]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:16 ip-172-31-10-45.ec2.internal sudo[10838]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:22 ip-172-31-10-45.ec2.internal sudo[11030]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -u systemd-logind
+Nov 06 07:25:22 ip-172-31-10-45.ec2.internal sudo[11030]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:27 ip-172-31-10-45.ec2.internal sudo[11030]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:32 ip-172-31-10-45.ec2.internal sudo[11222]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -k
+Nov 06 07:25:32 ip-172-31-10-45.ec2.internal sudo[11222]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:38 ip-172-31-10-45.ec2.internal sudo[11222]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:43 ip-172-31-10-45.ec2.internal sudo[11414]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -f
+Nov 06 07:25:43 ip-172-31-10-45.ec2.internal sudo[11414]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:51 ip-172-31-10-45.ec2.internal sudo[11414]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:25:57 ip-172-31-10-45.ec2.internal sudo[11589]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:25:57 ip-172-31-10-45.ec2.internal sudo[11589]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:25:57 ip-172-31-10-45.ec2.internal sudo[11589]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:26:06 ip-172-31-10-45.ec2.internal sudo[11791]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:26:06 ip-172-31-10-45.ec2.internal sudo[11791]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:26:07 ip-172-31-10-45.ec2.internal sudo[11791]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:26:18 ip-172-31-10-45.ec2.internal sudo[11993]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:26:18 ip-172-31-10-45.ec2.internal sudo[11993]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:26:18 ip-172-31-10-45.ec2.internal sudo[11993]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:26:25 ip-172-31-10-45.ec2.internal sudo[12195]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -p err --since '24 hours ago'
+Nov 06 07:26:25 ip-172-31-10-45.ec2.internal sudo[12195]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:26:29 ip-172-31-10-45.ec2.internal sudo[12195]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:27:12 ip-172-31-10-45.ec2.internal sudo[12784]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl -u sshd --since '24 hours ago'
+Nov 06 07:27:12 ip-172-31-10-45.ec2.internal sudo[12784]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:27:12 ip-172-31-10-45.ec2.internal sudo[12784]: pam_unix(sudo:session): session closed for user root
+Nov 06 07:27:24 ip-172-31-10-45.ec2.internal sudo[12966]:   centos : TTY=pts/0 ; PWD=/home/centos/redhat-security-ex415/20-proactive-reactive-security-analysis/scripts ; USER=root ; COMMAND=/bin/journalctl --since '24 hours ago'
+Nov 06 07:27:24 ip-172-31-10-45.ec2.internal sudo[12966]: pam_unix(sudo:session): session opened for user root(uid=0) by centos(uid=1001)
+Nov 06 07:27:24 ip-172-31-10-45.ec2.internal sudo[12966]: pam_unix(sudo:session): session closed for user root
+
+=== System Errors ===
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: qla4xxx will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: qla4xxx_module_init will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: cnic will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: cnic_init will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: bnx2i will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: bnx2i_mod_init will not be maintained in a future major release and may be disabled
+Nov 06 07:13:56 ip-172-31-15-216.ec2.internal kernel: piix4_smbus 0000:00:01.3: SMBus base address uninitialized - upgrade BIOS or use force_addr=0xaddr
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: qla4xxx will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: qla4xxx_module_init will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: cnic will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: cnic_init will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: bnx2i will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: bnx2i_mod_init will not be maintained in a future major release and may be disabled
+Nov 06 07:13:56 ip-172-31-15-216.ec2.internal kernel: piix4_smbus 0000:00:01.3: SMBus base address uninitialized - upgrade BIOS or use force_addr=0xaddr
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: qla4xxx will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: qla4xxx_module_init will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: cnic will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: cnic_init will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: bnx2i will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: bnx2i_mod_init will not be maintained in a future major release and may be disabled
+Nov 06 07:13:56 ip-172-31-15-216.ec2.internal kernel: piix4_smbus 0000:00:01.3: SMBus base address uninitialized - upgrade BIOS or use force_addr=0xaddr
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: qla4xxx will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: qla4xxx_module_init will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: cnic will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: cnic_init will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: bnx2i will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: bnx2i_mod_init will not be maintained in a future major release and may be disabled
+Nov 06 07:13:56 ip-172-31-15-216.ec2.internal kernel: piix4_smbus 0000:00:01.3: SMBus base address uninitialized - upgrade BIOS or use force_addr=0xaddr
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: qla4xxx will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: qla4xxx_module_init will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: cnic will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: cnic_init will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: bnx2i will not be maintained in a future major release and may be disabled
+Nov 06 07:13:52 localhost kernel: Warning: Deprecated Driver is detected: bnx2i_mod_init will not be maintained in a future major release and may be disabled
+Nov 06 07:13:56 ip-172-31-15-216.ec2.internal kernel: piix4_smbus 0000:00:01.3: SMBus base address uninitialized - upgrade BIOS or use force_addr=0xaddr
