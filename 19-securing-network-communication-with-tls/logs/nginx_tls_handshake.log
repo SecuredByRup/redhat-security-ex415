@@ -1,0 +1,58 @@
+Connecting to 127.0.0.1
+depth=0 C=US, ST=State, L=City, O=Lab, OU=IT, CN=localhost
+verify error:num=18:self-signed certificate
+verify return:1
+depth=0 C=US, ST=State, L=City, O=Lab, OU=IT, CN=localhost
+verify return:1
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:C=US, ST=State, L=City, O=Lab, OU=IT, CN=localhost
+   i:C=US, ST=State, L=City, O=Lab, OU=IT, CN=localhost
+   a:PKEY: RSA, 2048 (bit); sigalg: sha256WithRSAEncryption
+   v:NotBefore: Nov  6 06:45:25 2026 GMT; NotAfter: Nov  6 06:45:25 2027 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIDZTCCAk2gAwIBAgIUfVRQSR7/25LF6RgqLC08aubZYbIwDQYJKoZIhvcNAQEL
+BQAwWzELMAkGA1UEBhMCVVMxDjAMBgNVBAgMBVN0YXRlMQ0wCwYDVQQHDARDaXR5
+MQwwCgYDVQQKDANMYWIxCzAJBgNVBAsMAklUMRIwEAYDVQQDDAlsb2NhbGhvc3Qw
+HhcNMjYxMTA2MDY0NTI1WhcNMjcxMTA2MDY0NTI1WjBbMQswCQYDVQQGEwJVUzEO
+MAwGA1UECAwFU3RhdGUxDTALBgNVBAcMBENpdHkxDDAKBgNVBAoMA0xhYjELMAkG
+A1UECwwCSVQxEjAQBgNVBAMMCWxvY2FsaG9zdDCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBAMmGccIRxvn7imOlywGKEPMhVtdP1pBtpR76p0b3GfyMg9U3
+gsCZyfHmCurczuodHaR9fIoExYTDFD3xciGHLUP/RRiD/LZyBm7CIP9HdmUAMgrC
+irB4sdxeY3WVrR8lbIWnwzuubssuKYBKAAaKqpQQgD2uyFMeIXlRHKwo8BNYCKzE
+FXRyIr4B6QYp9WU6AsKPZVeewrBuei7xvj/4oQQ7pMAdd5BQS9SswDVP3n/3qi5q
+SYeYloO9zjtgp4UT1XWPWGJhS95SLVBivICb/wfNMxazU4Li3fLfjoGPBAwD+YlT
+EoamacubKh47IHPGh9pV2JIkwFwfJQl6X6MwQAkCAwEAAaMhMB8wHQYDVR0OBBYE
+FCaXDQgOLE7vdGqfWcthLLsupl+WMA0GCSqGSIb3DQEBCwUAA4IBAQA2W/+GVUwg
+OVftu84N5w66O+M28sxRXEavmzAL2S9o+4IboO97DnbdWOARL9iv73o9Pg9YEZBC
+rxpxlJAtHKAenuzKId/45XRn6b1mwzsL1+4B5LzDbsphsLk3QJwbI2FDKrZZ1/sw
+2+qhbtSA6QeLkIB3ug7wKkzJGjjJkAnLMULM8k90+IelL6MruV8Z1MmTJuYuQdfb
+6LlwW3gq5nLz0qjLuvda1jB/8BLf9+TBXsQn10V6C4w8l92hISHAR1iFwzjOu28x
+x5rrAeVEzwCHArMkw/H0vPJU9R+UliVcEX0CiAmjewwgX9LN1rWvEW9yPgAiISUb
+dWcgFs+vu8q0
+-----END CERTIFICATE-----
+subject=C=US, ST=State, L=City, O=Lab, OU=IT, CN=localhost
+issuer=C=US, ST=State, L=City, O=Lab, OU=IT, CN=localhost
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: rsa_pss_rsae_sha256
+Peer Temp Key: X25519, 253 bits
+---
+SSL handshake has read 1433 bytes and written 403 bytes
+Verification error: self-signed certificate
+---
+New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+Protocol: TLSv1.3
+Server public key is 2048 bit
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 18 (self-signed certificate)
+---
+DONE
