@@ -1,0 +1,114 @@
+[2026-11-02 15:02:15] === Port Security Script Started ===
+[2026-11-02 15:02:15] Starting port scan...
+[2026-11-02 15:02:15] Current listening ports:
+tcp        0      0 0.0.0.0:8443            0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+tcp6       0      0 :::8443                 :::*                    LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+[2026-11-02 15:02:15] Checking for unused services to disable...
+[2026-11-02 15:02:15] Service telnet is already inactive
+[2026-11-02 15:02:15] Service rsh is already inactive
+[2026-11-02 15:02:15] Service rlogin is already inactive
+[2026-11-02 15:02:15] Service vsftpd is already inactive
+[2026-11-02 15:02:15] Service xinetd is already inactive
+[2026-11-02 15:02:15] Configuring firewall rules...
+[2026-11-02 15:02:15] Removing dhcpv6-client from firewall
+[2026-11-02 15:02:15] Removing cockpit from firewall
+[2026-11-02 15:02:15] Firewall configuration updated
+[2026-11-02 15:02:15] === Port Security Script Completed ===
+[2026-11-02 15:08:56] === Port Security Script Started ===
+[2026-11-02 15:08:56] Starting port scan...
+[2026-11-02 15:08:56] Current listening ports:
+tcp        0      0 0.0.0.0:8443            0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+tcp6       0      0 :::8443                 :::*                    LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+[2026-11-02 15:08:56] Checking for unused services to disable...
+[2026-11-02 15:08:56] Service telnet is already inactive
+[2026-11-02 15:08:56] Service rsh is already inactive
+[2026-11-02 15:08:56] Service rlogin is already inactive
+[2026-11-02 15:08:56] Service vsftpd is already inactive
+[2026-11-02 15:08:56] Service xinetd is already inactive
+[2026-11-02 15:08:56] Configuring firewall rules...
+[2026-11-02 15:08:56] Firewall configuration updated
+[2026-11-02 15:08:56] === Port Security Script Completed ===
+[2026-11-02 15:11:08] === Port Security Script Started ===
+[2026-11-02 15:11:08] Starting port scan...
+[2026-11-02 15:11:08] Current listening ports:
+tcp        0      0 0.0.0.0:8443            0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+tcp6       0      0 :::8443                 :::*                    LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+[2026-11-02 15:11:08] Checking for unused services to disable...
+[2026-11-02 15:11:08] Service telnet is already inactive
+[2026-11-02 15:11:08] Service rsh is already inactive
+[2026-11-02 15:11:08] Service rlogin is already inactive
+[2026-11-02 15:11:08] Service vsftpd is already inactive
+[2026-11-02 15:11:08] Service xinetd is already inactive
+[2026-11-02 15:11:08] Configuring firewall rules...
+[2026-11-02 15:11:08] Firewall configuration updated
+[2026-11-02 15:11:08] === Port Security Script Completed ===
+[2026-11-02 15:16:49] === Port Security Script Started ===
+[2026-11-02 15:16:49] Starting port scan...
+[2026-11-02 15:16:49] Current listening ports:
+tcp        0      0 0.0.0.0:8443            0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+tcp6       0      0 :::8443                 :::*                    LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+[2026-11-02 15:16:49] Checking for unused services to disable...
+[2026-11-02 15:16:49] Service telnet is already inactive
+[2026-11-02 15:16:49] Service rsh is already inactive
+[2026-11-02 15:16:49] Service rlogin is already inactive
+[2026-11-02 15:16:49] Service vsftpd is already inactive
+[2026-11-02 15:16:49] Service xinetd is already inactive
+[2026-11-02 15:16:49] Configuring firewall rules...
+[2026-11-02 15:16:49] Firewall configuration updated
+[2026-11-02 15:16:49] === Port Security Script Completed ===
+[2026-11-02 15:17:03] === Port Security Script Started ===
+[2026-11-02 15:17:03] Starting port scan...
+[2026-11-02 15:17:03] Current listening ports:
+tcp        0      0 0.0.0.0:8443            0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+tcp6       0      0 :::8443                 :::*                    LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+[2026-11-02 15:17:03] Checking for unused services to disable...
+[2026-11-02 15:17:03] Service telnet is already inactive
+[2026-11-02 15:17:03] Service rsh is already inactive
+[2026-11-02 15:17:03] Service rlogin is already inactive
+[2026-11-02 15:17:03] Service vsftpd is already inactive
+[2026-11-02 15:17:03] Service xinetd is already inactive
+[2026-11-02 15:17:03] Configuring firewall rules...
+[2026-11-02 15:17:03] Firewall configuration updated
+[2026-11-02 15:17:03] === Port Security Script Completed ===
+[2026-11-02 15:21:04] === Port Security Script Started ===
+[2026-11-02 15:21:04] Starting port scan...
+[2026-11-02 15:21:04] Current listening ports:
+tcp        0      0 0.0.0.0:8443            0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+tcp6       0      0 :::8443                 :::*                    LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+[2026-11-02 15:21:04] Checking for unused services to disable...
+[2026-11-02 15:21:04] Service telnet is already inactive
+[2026-11-02 15:21:04] Service rsh is already inactive
+[2026-11-02 15:21:04] Service rlogin is already inactive
+[2026-11-02 15:21:04] Service vsftpd is already inactive
+[2026-11-02 15:21:04] Service xinetd is already inactive
+[2026-11-02 15:21:04] Configuring firewall rules...
+[2026-11-02 15:21:04] Firewall configuration updated
+[2026-11-02 15:21:04] === Port Security Script Completed ===
+[2026-11-02 15:21:08] === Port Security Script Started ===
+[2026-11-02 15:21:08] Starting port scan...
+[2026-11-02 15:21:08] Current listening ports:
+tcp        0      0 0.0.0.0:8443            0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+tcp6       0      0 :::8443                 :::*                    LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+[2026-11-02 15:21:08] Checking for unused services to disable...
+[2026-11-02 15:21:08] Service telnet is already inactive
+[2026-11-02 15:21:08] Service rsh is already inactive
+[2026-11-02 15:21:08] Service rlogin is already inactive
+[2026-11-02 15:21:08] Service vsftpd is already inactive
+[2026-11-02 15:21:08] Service xinetd is already inactive
+[2026-11-02 15:21:08] Configuring firewall rules...
+[2026-11-02 15:21:08] Firewall configuration updated
+[2026-11-02 15:21:08] === Port Security Script Completed ===

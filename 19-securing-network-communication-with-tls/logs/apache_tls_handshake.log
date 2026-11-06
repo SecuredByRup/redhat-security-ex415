@@ -1,0 +1,60 @@
+Connecting to ::1
+depth=0 C=NP, ST=Bagmati, L=Kathmandu, O=Eagle Dreams, OU=Prod, CN=Mac, emailAddress=rsaha1085@gmail.com
+verify error:num=18:self-signed certificate
+verify return:1
+depth=0 C=NP, ST=Bagmati, L=Kathmandu, O=Eagle Dreams, OU=Prod, CN=Mac, emailAddress=rsaha1085@gmail.com
+verify return:1
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:C=NP, ST=Bagmati, L=Kathmandu, O=Eagle Dreams, OU=Prod, CN=Mac, emailAddress=rsaha1085@gmail.com
+   i:C=NP, ST=Bagmati, L=Kathmandu, O=Eagle Dreams, OU=Prod, CN=Mac, emailAddress=rsaha1085@gmail.com
+   a:PKEY: RSA, 2048 (bit); sigalg: sha256WithRSAEncryption
+   v:NotBefore: Nov  6 06:36:55 2026 GMT; NotAfter: Nov  6 06:36:55 2027 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIDxzCCAq+gAwIBAgIUNFZXQRsQLr9e3Tn2NpgCJZb+goUwDQYJKoZIhvcNAQEL
+BQAwgYsxCzAJBgNVBAYTAk5QMRAwDgYDVQQIDAdCYWdtYXRpMRIwEAYDVQQHDAlL
+YXRobWFuZHUxFTATBgNVBAoMDEVhZ2xlIERyZWFtczENMAsGA1UECwwEUHJvZDEM
+MAoGA1UEAwwDTWFjMSIwIAYJKoZIhvcNAQkBFhNyc2FoYTEwODVAZ21haWwuY29t
+MB4XDTI2MTEwNjA2MzY1NVoXDTI3MTEwNjA2MzY1NVowgYsxCzAJBgNVBAYTAk5Q
+MRAwDgYDVQQIDAdCYWdtYXRpMRIwEAYDVQQHDAlLYXRobWFuZHUxFTATBgNVBAoM
+DEVhZ2xlIERyZWFtczENMAsGA1UECwwEUHJvZDEMMAoGA1UEAwwDTWFjMSIwIAYJ
+KoZIhvcNAQkBFhNyc2FoYTEwODVAZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEA4Oyo0X+IbMTyf3UA1dbUYlX0tm6Q6v0UbzVAYTT6d5FI
+OzELxOcVGHZWz5Tk4moMQOZia6Huk2GKXLxMLH699kHDSthQ9y4xkGFU6uzYWZcl
+V8gCc8qDBWbwBnVNZMhox9tLpgXgJydmQVFnRstrIF8XoDRLLAEiK+D6286MxL6g
+7yqZi8DNmys+MIdO0lsAr9jVUQfNKUJ8ckxIMfBoUgc5M5GS30leoSWXa0KGxT01
+E9uPqOFz8Efncj2sorLBUXt3fwl5AhOYR0wGdA6hfqLxcDL9FyZXWvISfNcLRJR/
+BdkPsTGgLn9o0DhOyqyxF6CMOZlyQ9I56iyREpaZqQIDAQABoyEwHzAdBgNVHQ4E
+FgQUsWmvK/kkOtGy6s9SpnF3Q4fo0KUwDQYJKoZIhvcNAQELBQADggEBAD/ZHNDS
+/9bbKKSsG+yT0B0xGsOGQPac4Hx95oX0bOGXab9pOHGXP3qzYnYbpkCOkynJvL1z
+fO1QcCynyKcs2cJFy0lAtXP8k/uyojNBGau1Ea8hqP3+weH9T/nuXVXp7Ip+2RRz
+iZ4NwCjupI4C1r3b7pCkB01oMAHE/tlspEri/UPlP8ri2Z2G09UaADRDLHw8tudn
+8xjj4YrjMin8IAmnM9UqaT78/YcST5WpEuFyrt3ndBUCiw1HZqhIxIGXQ8CCxG0h
+jTo3foABUfyQDWt7iUO9uMmxZy2+YmgNjyi/lhs+/CbhZiD+P0vLZLPP8c4ojJwK
+4gKbJHnJAiAUxiw=
+-----END CERTIFICATE-----
+subject=C=NP, ST=Bagmati, L=Kathmandu, O=Eagle Dreams, OU=Prod, CN=Mac, emailAddress=rsaha1085@gmail.com
+issuer=C=NP, ST=Bagmati, L=Kathmandu, O=Eagle Dreams, OU=Prod, CN=Mac, emailAddress=rsaha1085@gmail.com
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: rsa_pss_rsae_sha256
+Peer Temp Key: X25519, 253 bits
+---
+SSL handshake has read 1531 bytes and written 403 bytes
+Verification error: self-signed certificate
+---
+New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+Protocol: TLSv1.3
+Server public key is 2048 bit
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 18 (self-signed certificate)
+---
+DONE

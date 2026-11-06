@@ -1,0 +1,5 @@
+---
+- include_tasks: ssh-hardening.yml
+- include_tasks: firewall-config.yml
+- include_tasks: system-hardening.yml
+- include_tasks: monitoring-setup.yml

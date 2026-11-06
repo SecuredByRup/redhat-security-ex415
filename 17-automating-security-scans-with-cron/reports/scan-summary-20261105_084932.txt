@@ -1,0 +1,9 @@
+OpenSCAP Security Scan Summary
+==============================
+Date: Thu Nov  5 08:49:32 UTC 2026
+Status: FAILED
+Profile: xccdf_org.ssgproject.content_profile_cis
+Failed Rules: 0
+Passed Rules: 0
+Report Location: /home/centos/redhat-security-ex415/17-automating-security-scans-with-cron/scripts/../reports/oscap-report-20261105_084932.html
+Results Location: /home/centos/redhat-security-ex415/17-automating-security-scans-with-cron/scripts/../reports/oscap-results-20261105_084932.xml

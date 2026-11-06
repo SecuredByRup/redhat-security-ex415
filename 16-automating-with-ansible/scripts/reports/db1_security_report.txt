@@ -1,0 +1,21 @@
+=== Security Configuration Report ===
+Date: Thu Nov  5 08:01:39 UTC 2026
+
+SSH Configuration:
+PermitRootLogin no
+MaxAuthTries 3
+PasswordAuthentication no
+
+Firewall Status:
+running
+running
+
+Active Services:
+
+Active Services:
+  fail2ban.service                   loaded active running Fail2Ban Service
+  firewalld.service                  loaded active running firewalld - dynamic firewall daemon
+  sshd.service                       loaded active running OpenSSH server daemon
+  fail2ban.service                   loaded active running Fail2Ban Service
+  firewalld.service                  loaded active running firewalld - dynamic firewall daemon
+  sshd.service                       loaded active running OpenSSH server daemon

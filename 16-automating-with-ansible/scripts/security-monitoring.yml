@@ -1,0 +1,56 @@
+---
+- name: Security Monitoring and Alerting
+  hosts: all
+  become: yes
+  tasks:
+    - name: Check for failed SSH login attempts
+      shell: grep "Failed password" /var/log/secure | tail -10
+      register: failed_logins
+      ignore_errors: yes
+      
+    - name: Check fail2ban status and banned IPs
+      shell: fail2ban-client status sshd
+      register: fail2ban_status
+      ignore_errors: yes
+      
+    - name: Check for suspicious network connections
+      shell: ss -tuln | grep LISTEN
+      register: listening_ports
+      ignore_errors: yes
+      
+    - name: Check system load
+      shell: uptime
+      register: system_load
+      
+    - name: Check disk usage
+      shell: df -h | grep -E '^/dev/'
+      register: disk_usage
+      
+    - name: Generate monitoring report
+      copy:
+        content: |
+          === Security Monitoring Report ===
+          Generated: {{ ansible_date_time.iso8601 }}
+          Host: {{ inventory_hostname }}
+          
+          Recent Failed SSH Logins:
+          {{ failed_logins.stdout }}
+          
+          Fail2ban Status:
+          {{ fail2ban_status.stdout }}
+          
+          Listening Ports:
+          {{ listening_ports.stdout }}
+          
+          System Load:
+          {{ system_load.stdout }}
+          
+          Disk Usage:
+          {{ disk_usage.stdout }}
+        dest: /tmp/monitoring_report_{{ ansible_date_time.epoch }}.txt
+        
+    - name: Fetch monitoring reports to local controller
+      fetch:
+        src: /tmp/monitoring_report_{{ ansible_date_time.epoch }}.txt
+        dest: ./monitoring/{{ inventory_hostname }}_{{ ansible_date_time.date }}.txt
+        flat: yes

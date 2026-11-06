@@ -1,0 +1,23 @@
+# Role-based sudo access control
+
+# Database Administrator Role
+Cmnd_Alias DB_COMMANDS = /usr/bin/mysql, /usr/bin/mysqldump, /bin/systemctl * mysql*, /bin/systemctl * mariadb*
+
+# Web Administrator Role  
+Cmnd_Alias WEB_COMMANDS = /bin/systemctl * httpd*, /bin/systemctl * nginx*, /bin/systemctl * apache2*, /usr/bin/tail /var/log/httpd/*, /usr/bin/tail /var/log/nginx/*, /usr/bin/tail /var/log/apache2/*
+
+# System Monitor Role
+Cmnd_Alias MONITOR_COMMANDS = /usr/bin/top, /usr/bin/htop, /bin/ps, /usr/bin/netstat, /bin/ss, /usr/bin/iotop, /usr/bin/iostat
+
+# File System Administrator Role
+Cmnd_Alias FS_COMMANDS = /bin/mount, /bin/umount, /sbin/fsck, /sbin/fdisk -l, /bin/df, /bin/du
+
+# Assign roles to users
+alice ALL = DB_COMMANDS
+bob ALL = WEB_COMMANDS  
+charlie ALL = MONITOR_COMMANDS, FS_COMMANDS
+diana ALL = MONITOR_COMMANDS
+
+# Time-based restrictions (optional - requires additional configuration)
+# Defaults:alice timestamp_timeout=30
+# Defaults:bob timestamp_timeout=60

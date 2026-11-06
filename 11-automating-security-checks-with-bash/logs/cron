@@ -1,0 +1,30 @@
+Nov  2 14:57:43 ip-172-31-10-204 crond[1155]: (CRON) STARTUP (1.5.7)
+Nov  2 14:57:43 ip-172-31-10-204 crond[1155]: (CRON) INFO (Syslog will be used instead of sendmail.)
+Nov  2 14:57:43 ip-172-31-10-204 crond[1155]: (CRON) INFO (RANDOM_DELAY will be scaled with factor 51% if used.)
+Nov  2 14:57:43 ip-172-31-10-204 crond[1155]: (CRON) INFO (running with inotify support)
+Nov  2 15:01:01 ip-172-31-10-204 CROND[4002]: (root) CMD (run-parts /etc/cron.hourly)
+Nov  2 15:01:01 ip-172-31-10-204 run-parts[4005]: (/etc/cron.hourly) starting 0anacron
+Nov  2 15:01:01 ip-172-31-10-204 anacron[4013]: Anacron started on 2026-11-02
+Nov  2 15:01:01 ip-172-31-10-204 anacron[4013]: Will run job `cron.daily' in 10 min.
+Nov  2 15:01:01 ip-172-31-10-204 anacron[4013]: Will run job `cron.weekly' in 30 min.
+Nov  2 15:01:01 ip-172-31-10-204 anacron[4013]: Will run job `cron.monthly' in 50 min.
+Nov  2 15:01:01 ip-172-31-10-204 anacron[4013]: Jobs will be executed sequentially
+Nov  2 15:01:01 ip-172-31-10-204 run-parts[4015]: (/etc/cron.hourly) finished 0anacron
+Nov  2 15:01:01 ip-172-31-10-204 CROND[4001]: (root) CMDEND (run-parts /etc/cron.hourly)
+Nov  2 15:09:12 ip-172-31-10-204 crontab[7583]: (root) BEGIN EDIT (root)
+Nov  2 15:09:35 ip-172-31-10-204 crontab[7583]: (root) REPLACE (root)
+Nov  2 15:09:35 ip-172-31-10-204 crontab[7583]: (root) END EDIT (root)
+Nov  2 15:09:42 ip-172-31-10-204 crontab[7769]: (root) LIST (root)
+Nov  2 15:10:43 ip-172-31-10-204 crontab[8344]: (root) LIST (root)
+Nov  2 15:10:43 ip-172-31-10-204 crontab[8348]: (root) LIST (root)
+Nov  2 15:10:43 ip-172-31-10-204 crontab[8402]: (root) LIST (root)
+Nov  2 15:10:43 ip-172-31-10-204 crontab[8427]: (root) LIST (root)
+Nov  2 15:11:01 ip-172-31-10-204 anacron[4013]: Job `cron.daily' started
+Nov  2 15:11:01 ip-172-31-10-204 anacron[4013]: Job `cron.daily' terminated
+Nov  2 15:21:46 ip-172-31-10-204 crontab[13375]: (root) LIST (root)
+Nov  2 15:21:46 ip-172-31-10-204 crontab[13390]: (root) LIST (root)
+Nov  2 15:21:46 ip-172-31-10-204 crontab[13394]: (root) LIST (root)
+Nov  2 15:21:47 ip-172-31-10-204 crontab[13448]: (root) LIST (root)
+Nov  2 15:21:47 ip-172-31-10-204 crontab[13473]: (root) LIST (root)
+Nov  2 15:31:01 ip-172-31-10-204 anacron[4013]: Job `cron.weekly' started
+Nov  2 15:31:01 ip-172-31-10-204 anacron[4013]: Job `cron.weekly' terminated

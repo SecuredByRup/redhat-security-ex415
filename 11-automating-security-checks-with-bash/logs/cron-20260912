@@ -1,0 +1,17 @@
+Jul  3 05:54:20 ip-172-31-15-244 crond[1084]: (CRON) STARTUP (1.5.7)
+Jul  3 05:54:20 ip-172-31-15-244 crond[1084]: (CRON) INFO (Syslog will be used instead of sendmail.)
+Jul  3 05:54:20 ip-172-31-15-244 crond[1084]: (CRON) INFO (RANDOM_DELAY will be scaled with factor 80% if used.)
+Jul  3 05:54:20 ip-172-31-15-244 crond[1084]: (CRON) INFO (running with inotify support)
+Jul  3 06:01:01 ip-172-31-15-244 CROND[35131]: (root) CMD (run-parts /etc/cron.hourly)
+Jul  3 06:01:01 ip-172-31-15-244 run-parts[35134]: (/etc/cron.hourly) starting 0anacron
+Jul  3 06:01:01 ip-172-31-15-244 anacron[35142]: Anacron started on 2026-07-03
+Jul  3 06:01:01 ip-172-31-15-244 anacron[35142]: Will run job `cron.daily' in 32 min.
+Jul  3 06:01:01 ip-172-31-15-244 anacron[35142]: Will run job `cron.weekly' in 52 min.
+Jul  3 06:01:01 ip-172-31-15-244 anacron[35142]: Will run job `cron.monthly' in 72 min.
+Jul  3 06:01:01 ip-172-31-15-244 anacron[35142]: Jobs will be executed sequentially
+Jul  3 06:01:01 ip-172-31-15-244 run-parts[35144]: (/etc/cron.hourly) finished 0anacron
+Jul  3 06:01:01 ip-172-31-15-244 CROND[35130]: (root) CMDEND (run-parts /etc/cron.hourly)
+Jul  3 06:17:13 ip-172-31-15-219 crond[1065]: (CRON) STARTUP (1.5.7)
+Jul  3 06:17:13 ip-172-31-15-219 crond[1065]: (CRON) INFO (Syslog will be used instead of sendmail.)
+Jul  3 06:17:13 ip-172-31-15-219 crond[1065]: (CRON) INFO (RANDOM_DELAY will be scaled with factor 43% if used.)
+Jul  3 06:17:13 ip-172-31-15-219 crond[1065]: (CRON) INFO (running with inotify support)

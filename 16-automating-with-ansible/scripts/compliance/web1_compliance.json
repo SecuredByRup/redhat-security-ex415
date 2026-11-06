@@ -1,0 +1,3 @@
+{"host": "web1", "timestamp": "2026-11-05T07:59:21Z", "checks": {}}
+    "ssh_protocol_v2": true,
+    "firewall_active": true,
