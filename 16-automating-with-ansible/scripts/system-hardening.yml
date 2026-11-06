@@ -1,0 +1,28 @@
+---
+- name: System Security Hardening
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: Install security packages
+      package:
+        name:
+          - fail2ban
+          - aide
+        state: present
+        
+    - name: Start and enable fail2ban
+      systemd:
+        name: fail2ban
+        state: started
+        enabled: yes
+        
+    - name: Set kernel parameters for security
+      sysctl:
+        name: "{{ item.name }}"
+        value: "{{ item.value }}"
+        state: present
+        reload: yes
+      loop:
+        - { name: 'net.ipv4.ip_forward', value: '0' }
+        - { name: 'net.ipv4.tcp_syncookies', value: '1' }

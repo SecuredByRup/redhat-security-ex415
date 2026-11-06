@@ -1,0 +1,12 @@
+Thu Nov  5 08:37:08 UTC 2026: Starting OpenSCAP security scan
+OpenSCAP Error: Unable to open file: '/usr/share/xml/scap/ssg/content/ssg-rhel8-ds.xml' [/builddir/build/BUILD/openscap-1.3.16/src/source/oscap_source.c:298]
+Thu Nov  5 08:37:08 UTC 2026: OpenSCAP scan failed with error code 0
+Thu Nov  5 08:37:08 UTC 2026: Scan summary created at /home/centos/redhat-security-ex415/17-automating-security-scans-with-cron/scripts/../reports/scan-summary-20261105_083708.txt
+Thu Nov  5 08:48:10 UTC 2026: Starting OpenSCAP security scan
+OpenSCAP Error: Unable to open file: '/usr/share/xml/scap/ssg/content/ssg-rhel8-ds.xml' [/builddir/build/BUILD/openscap-1.3.16/src/source/oscap_source.c:298]
+Thu Nov  5 08:48:10 UTC 2026: OpenSCAP scan failed with error code 0
+Thu Nov  5 08:48:10 UTC 2026: Scan summary created at /home/centos/redhat-security-ex415/17-automating-security-scans-with-cron/scripts/../reports/scan-summary-20261105_084810.txt
+Thu Nov  5 08:49:32 UTC 2026: Starting OpenSCAP security scan
+OpenSCAP Error: Unable to open file: '/usr/share/xml/scap/ssg/content/ssg-rhel8-ds.xml' [/builddir/build/BUILD/openscap-1.3.16/src/source/oscap_source.c:298]
+Thu Nov  5 08:49:32 UTC 2026: OpenSCAP scan failed with error code 0
+Thu Nov  5 08:49:32 UTC 2026: Scan summary created at /home/centos/redhat-security-ex415/17-automating-security-scans-with-cron/scripts/../reports/scan-summary-20261105_084932.txt
